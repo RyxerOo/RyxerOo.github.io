@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>DC1</title>
+      <link href="/2026/06/04/DC1/"/>
+      <url>/2026/06/04/DC1/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> Red </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> DC系列 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>uWSGI 漏洞复现（CVE-2018-7490）</title>
       <link href="/2026/05/29/uWSGI-%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0CVE-2018-7490/"/>
       <url>/2026/05/29/uWSGI-%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0CVE-2018-7490/</url>
