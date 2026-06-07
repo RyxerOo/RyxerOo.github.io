@@ -17,10 +17,11 @@
 <hr>
 <h3 id="3-杀死进程用什么命令？具体点。"><a href="#3-杀死进程用什么命令？具体点。" class="headerlink" title="3. 杀死进程用什么命令？具体点。"></a><strong>3. 杀死进程用什么命令？具体点。</strong></h3><ul>
 <li><p>找到 PID 后使用 <code>kill</code>：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">kill 1234           # 发送 SIGTERM，优雅退出</span><br><span class="line">kill -9 1234        # 发送 SIGKILL，强制杀死</span><br></pre></td></tr></table></figure>
+<p>kill 1234           # 发送 SIGTERM，优雅退出<br>kill -9 1234        # 发送 SIGKILL，强制杀死</p>
 </li>
 <li><p>按名字杀进程：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">killall -9 nginx    # 杀死所有 nginx 进程</span><br><span class="line">pkill -9 -f nginx   # 支持正则匹配，-f 匹配完整命令行</span><br></pre></td></tr></table></figure></li>
+<p>killall -9 nginx    # 杀死所有 nginx 进程<br>pkill -9 -f nginx   # 支持正则匹配，-f 匹配完整命令行</p>
+</li>
 </ul>
 <hr>
 <h3 id="4-3306-是什么数据库？6379-呢？"><a href="#4-3306-是什么数据库？6379-呢？" class="headerlink" title="4. 3306 是什么数据库？6379 呢？"></a><strong>4. 3306 是什么数据库？6379 呢？</strong></h3><ul>
