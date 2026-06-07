@@ -11,8 +11,14 @@
 </ul>
 <hr>
 <h3 id="2-查看-80-端口被哪个进程占用，Linux-下用什么命令？"><a href="#2-查看-80-端口被哪个进程占用，Linux-下用什么命令？" class="headerlink" title="2. 查看 80 端口被哪个进程占用，Linux 下用什么命令？"></a><strong>2. 查看 80 端口被哪个进程占用，Linux 下用什么命令？</strong></h3><p>常用三个命令：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ss -tlnp | grep :80        # 推荐，更快</span><br><span class="line">netstat -tlnp | grep :80   # 传统方法</span><br><span class="line">lsof -i :80                # 直接列出进程名和 PID</span><br></pre></td></tr></table></figure>
-
+<ul>
+<li><p>ss -tlnp | grep :80        # 推荐，更快</p>
+</li>
+<li><p>netstat -tlnp | grep :80   # 传统方法</p>
+</li>
+<li><p>lsof -i :80                # 直接列出进程名和 PID</p>
+</li>
+</ul>
 <p>例如 <code>ss -tlnp | grep :80</code> 会显示类似 <code>LISTEN 0 128 *:80 *:* users:((&quot;nginx&quot;,pid=1234,fd=6))</code> 的输出，直接看到进程名和 PID。</p>
 <hr>
 <h3 id="3-杀死进程用什么命令？具体点。"><a href="#3-杀死进程用什么命令？具体点。" class="headerlink" title="3. 杀死进程用什么命令？具体点。"></a><strong>3. 杀死进程用什么命令？具体点。</strong></h3><ul>
