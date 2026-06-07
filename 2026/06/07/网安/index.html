@@ -372,27 +372,6 @@
 <li>ua头为antsword xxx</li>
 <li>蚁剑混淆加密后还有一个比较明显的特征,即为参数名大多以“<em>0x……&#x3D;”这种形式（下划线可替换），所以以</em>0x开头的参数名也很可能就是恶意流量</li>
 </ul>
-<p>弱特工具流量特征</p>
-<h4 id="冰蝎-1"><a href="#冰蝎-1" class="headerlink" title="冰蝎"></a>冰蝎</h4><p><strong>3.0特征</strong></p>
-<ul>
-<li>特征分析<strong>Content-Type: application&#x2F;octet-stream</strong> 这是一个<strong>强特征</strong> 查阅资料可知octet-stream的意思是，<strong>只能提交二进制，而且只能提交一个二进制</strong>，如果提交文件的话，只能提交一个文件,后台接收参数只能有一个，而且只能是流（或者字节数组）</li>
-<li>内置16个ua头,比较老,属于n年前的浏览器产品,现在没什么人用</li>
-<li>content-length长度为5720或5740(随Java版本改变)</li>
-</ul>
-<p><strong>4.0特征</strong></p>
-<ul>
-<li>10个内置ua头随机选用</li>
-<li>端口为49700左右，每次连接会递增</li>
-<li>PHPwebshell存在固定代码</li>
-<li>请求头和响应头字节固定</li>
-<li>webshell存在默认字符串，为默认连接密码的MD5的前16位</li>
-<li>Content-Type不再是二进制，改成urlencoded，但是是弱特征</li>
-</ul>
-<h4 id="蚁剑-1"><a href="#蚁剑-1" class="headerlink" title="蚁剑"></a>蚁剑</h4><p><strong>强特征</strong></p>
-<ul>
-<li>ua头为antsword xxx</li>
-<li>蚁剑混淆加密后还有一个比较明显的特征,即为参数名大多以“<em>0x……&#x3D;”这种形式（下划线可替换），所以以</em>0x开头的参数名也很可能就是恶意流量</li>
-</ul>
 <p><strong>弱特征</strong></p>
 <p>可能有明文的@ini_set(“display_errors”,”0”)</p>
 <h4 id="菜刀"><a href="#菜刀" class="headerlink" title="菜刀"></a>菜刀</h4><p><strong>sqlmap</strong></p>
