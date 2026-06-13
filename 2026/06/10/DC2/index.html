@@ -1,0 +1,250 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#496b8c"><meta name="description" content="Ryxer"><meta name="author" content="Ryxer is here"><meta name="generator" content="Hexo 7.3.0"><title>DC2 | Ryxer</title><style>:root {
+  --accent: #496b8c;
+  --accent-strong: color-mix(in srgb, #496b8c 62%, #223142);
+  --accent-soft: #dce8f0;
+}</style><link rel="stylesheet" href="/css/hsad-theme.css"><script src="/js/hsad-theme.js" defer></script></head><body class="view-inner view-post"><div class="reading-progress" aria-hidden="true"><span class="reading-progress__bar" data-reading-progress></span></div><div class="page-aura page-aura--one"></div><div class="page-aura page-aura--two"></div><div class="site-shell"><aside class="site-sidebar"><section class="sidebar sidebar--desktop"><div class="sidebar__backdrop" style="background-image:url(/images/1.jpg)"></div><div class="sidebar__overlay"></div><div class="sidebar__content"><a class="sidebar__brand" href="/"><img class="sidebar__avatar" src="/images/y.jpg" alt="Ryxer is here"><div class="sidebar__identity"><h2 class="sidebar__title">Ryxer</h2><p class="sidebar__subtitle">闲邪存其诚</p></div></a><p class="sidebar__description">天行健，君子以自强不息</p><nav class="sidebar__nav" aria-label="Primary"><a href="/">首页</a><a href="/archives/">归档</a><a href="/categories/">分类</a><a href="/tags/">标签</a><a href="/links/">友情链</a><a href="/about/">关于</a></nav><div class="sidebar__social"><a href="https://github.com/ryxeroo" target="_blank" rel="noopener">GitHub</a><a href="mailto:2024728478@qq.com" target="_blank" rel="noopener">E-Mail</a></div></div></section></aside><div class="mobile-topbar"><button class="mobile-topbar__toggle js-drawer-toggle" type="button" aria-label="Open navigation"><span></span><span></span><span></span></button><a class="mobile-topbar__title" href="/">Ryxer</a><a class="mobile-topbar__avatar" href="/"><img src="/images/y.jpg" alt="Ryxer is here"></a></div><div class="mobile-drawer" data-drawer aria-hidden="true"><div class="mobile-drawer__panel"><section class="sidebar sidebar--mobile"><div class="sidebar__backdrop" style="background-image:url(/images/1.jpg)"></div><div class="sidebar__overlay"></div><div class="sidebar__content"><a class="sidebar__brand" href="/"><img class="sidebar__avatar" src="/images/y.jpg" alt="Ryxer is here"><div class="sidebar__identity"><h2 class="sidebar__title">Ryxer</h2><p class="sidebar__subtitle">闲邪存其诚</p></div></a><p class="sidebar__description">天行健，君子以自强不息</p><nav class="sidebar__nav" aria-label="Primary"><a href="/">首页</a><a href="/archives/">归档</a><a href="/categories/">分类</a><a href="/tags/">标签</a><a href="/links/">友情链</a><a href="/about/">关于</a></nav><div class="sidebar__social"><a href="https://github.com/ryxeroo" target="_blank" rel="noopener">GitHub</a><a href="mailto:2024728478@qq.com" target="_blank" rel="noopener">E-Mail</a></div></div></section></div></div><div class="mobile-backdrop js-drawer-close"></div><main class="site-main"><div class="article-layout article-layout--with-toc"><article class="article"><header class="article__header"><div class="article__eyebrow"><a href="/categories/Red/">Red</a></div><h1 class="article__title">DC2</h1><div class="article__meta"><time datetime="2026-06-10T02:46:18.000Z">2026-06-10</time><span class="article__divider">/</span><span>更新于 2026-06-13</span></div><div class="article__tags"><a class="article__tag" href="/tags/DC%E7%B3%BB%E5%88%97/">DC系列</a></div></header><details class="post-outline post-outline--mobile"><summary class="post-outline__summary"><span>本文导航</span><small>按标题快速定位</small></summary><nav class="post-toc" data-post-toc><ol class="post-toc__list"><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#%E4%B8%80%E3%80%81%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86"><span class="post-toc__list-text">一、信息收集</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#%E4%BA%8C%E3%80%81%E6%BC%8F%E6%B4%9E%E5%88%86%E6%9E%90"><span class="post-toc__list-text">二、漏洞分析</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#%E4%B8%89%E3%80%81%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="post-toc__list-text">三、知识点</span></a></li></ol></nav></details><div class="article__content"><h3 id="一、信息收集"><a href="#一、信息收集" class="headerlink" title="一、信息收集"></a>一、信息收集</h3><h4 id="1、依旧kali中arp-scan-l查看存活主机"><a href="#1、依旧kali中arp-scan-l查看存活主机" class="headerlink" title="1、依旧kali中arp-scan -l查看存活主机"></a>1、依旧kali中arp-scan -l查看存活主机</h4><p><img src="/images/DC2_1.png" alt="DC2_1"></p>
+<p>可以简单分析一下，靶机ip为192.168.47.132</p>
+<h4 id="2、nmap扫描一下端口"><a href="#2、nmap扫描一下端口" class="headerlink" title="2、nmap扫描一下端口"></a>2、nmap扫描一下端口</h4><p>nmap -A -p- 192.168.47.132</p>
+<ul>
+<li>**<code>-A</code>**：启用“高级”或“侵略性”扫描选项。它相当于同时开启了以下功能：<ul>
+<li>操作系统检测（<code>-O</code>）</li>
+<li>服务版本检测（<code>-sV</code>）</li>
+<li>脚本扫描（<code>-sC</code>，使用默认脚本）</li>
+<li>路由跟踪（<code>--traceroute</code>）</li>
+</ul>
+</li>
+<li><strong><code>-p-</code><strong>：扫描</strong>所有端口</strong>。端口范围默认为 1–65535，<code>-p-</code> 等价于 <code>-p 1-65535</code>，即不遗漏任何一个 TCP 端口。</li>
+</ul>
+<p><img src="/images/DC2_2.png" alt="DC2_2"></p>
+<p>发现开放了80端口和7744端口</p>
+<h4 id="3、访问web页面"><a href="#3、访问web页面" class="headerlink" title="3、访问web页面"></a>3、访问web页面</h4><p>直接访问靶机ip <a target="_blank" rel="noopener" href="http://192.168.47.132失败/">http://192.168.47.132失败</a></p>
+<p><img src="/images/DC2_3.png" alt="DC2_3"></p>
+<p>需要修改&#x2F;etc&#x2F;host文件，添加192.168.47.132	dc-2，保存退出</p>
+<p><img src="/images/DC2_4.png" alt="DC2_4"></p>
+<p><img src="/images/DC2_5.png" alt="DC2_5"></p>
+<p>此时就可以正常访问了</p>
+<p><img src="/images/DC2_6.png" alt="DC2_6"></p>
+<p>继续借助wappalyzer插件得知CMS是wordPress(一种PHP语言和Mysql数据开发的博客平台)</p>
+<p><img src="/images/DC2_7.png" alt="DC2_7"></p>
+<p>在web页面得到flag1,flag1提示我们去使用cewl工具破解密码(cewl是一款采用Ruby开发的应用程序，可以给它的爬虫指定URL地址和爬取深度，还可以添额外的外部链接，接下来Cewl会返回一个字典文件，可以用于密码破解)</p>
+<p><img src="/images/DC2_8.png" alt="DC2_8"></p>
+<p>flag1:你常用的单词表可能派不上用场，所以，或许你只需要保持冷静。</p>
+<p>密码越多越好，但有时你终究无法全胜。</p>
+<p>以其中一人的身份登录，查看下一个旗帜。</p>
+<p>若无法找到，请以其他账号登录。</p>
+<h3 id="二、漏洞分析"><a href="#二、漏洞分析" class="headerlink" title="二、漏洞分析"></a>二、漏洞分析</h3><h4 id="1、登陆web页面"><a href="#1、登陆web页面" class="headerlink" title="1、登陆web页面"></a>1、登陆web页面</h4><p>根据flag1的内容知道需要登陆，所以使用dirb扫描目录，得知存在<a target="_blank" rel="noopener" href="http://dc-2/wp-admin/">http://dc-2/wp-admin/</a> 目录</p>
+<p><img src="/images/DC2_9.png" alt="DC2_9"></p>
+<p>访问得到登陆页面</p>
+<p><img src="/images/DC2_10.png" alt="DC2_10"></p>
+<p>根据flag1提示知需要Cewl，故我们先使用wpscan进行用户枚举</p>
+<p><img src="/images/DC2_11.png" alt="DC2_11"></p>
+<p><img src="/images/DC2_12.png" alt="DC2_12"></p>
+<p>得到三个用户，分别是admin、jerry、tom，写到一个user.txt文件中</p>
+<p><img src="/images/DC2_13.png" alt="DC2_13"></p>
+<p>使用cewl生成字典文件</p>
+<p><img src="/images/DC2_14.png" alt="DC2_14"></p>
+<p>使用wpscan爆破密码</p>
+<p><img src="/images/DC2_15.png" alt="DC2_15"></p>
+<p>发现只爆破出来两个密码，admin密码未爆破出</p>
+<p><img src="/images/DC2_16.png" alt="DC2_16"></p>
+<p>使用jerry登陆,在页面中找到flag2</p>
+<p><img src="/images/DC2_17.png" alt="DC2_17"></p>
+<p>flag2:如果你无法利用WordPress并走捷径，还有另一种方法。</p>
+<p>希望你找到了另一个切入点。</p>
+<p><img src="/images/DC2_18.png" alt="DC2_18"></p>
+<h4 id="2、远程登陆"><a href="#2、远程登陆" class="headerlink" title="2、远程登陆"></a>2、远程登陆</h4><p>根据flag2的提示，我们想到最开始进行端口扫描时还有一个7744端口ssh服务，所以我们尝试ssh远程连接</p>
+<p><img src="/images/DC2_19.png" alt="DC2_19"></p>
+<p>发现jerry总是提示密码错误，登不上，换tom账号顺利登入</p>
+<p><img src="/images/DC2_20.png" alt="DC2_20"></p>
+<p>登陆成功后我想切到jerry用户，但被拒绝了。原因是<code>su</code> 在内部可能会尝试 <code>cd</code> 到目标用户的家目录，但 rbash 禁止了 <code>cd</code> 命令，所以报错 <code>cd: restricted</code>，切换失败。</p>
+<p>所以我利用数组绕过限制获得普通shell</p>
+<ul>
+<li>这是一个经典的 <strong>rbash 逃逸技巧</strong>。</li>
+<li><code>BASH_CMDS</code> 是 bash 内部的一个哈希表（关联数组），用于存储命令的路径缓存。</li>
+<li>通过 <code>BASH_CMDS[a]=/bin/sh</code> 把键 <code>a</code> 对应的命令定义为 <code>/bin/sh</code>。</li>
+<li>然后单独执行 <code>a</code>，bash 会从这个哈希表中查找并运行 <code>/bin/sh</code>，从而启动一个不受限制的子 shell（<code>$</code> 提示符表示已进入新 shell）。</li>
+<li>接着在新 shell 里执行 <code>/bin/bash</code>，获得一个功能完整的 bash 环境（此时可能已不受 rbash 限制）。</li>
+</ul>
+<p>接着我执行 export PATH&#x3D;$PATH:&#x2F;bin&#x2F; 和  export PATH&#x3D;$PATH:&#x2F;usr&#x2F;bin&#x2F; 恢复PATH环境变量</p>
+<ul>
+<li>rbash 通常会限制或清空 <code>PATH</code>，导致很多常用命令无法直接使用。</li>
+<li>这两条命令将 <code>/bin/</code> 和 <code>/usr/bin/</code> 追加到 <code>PATH</code> 中，让系统恢复对 <code>ls</code>、<code>cat</code>、<code>id</code> 等基础工具的访问能力。</li>
+</ul>
+<p><img src="/images/DC2_21.png" alt="DC2_21"></p>
+<p>切换成功后在jerry家目录找到了flag4</p>
+<p>flag4:很高兴看到你已经走了这么远，但你还没回家。<br>你仍然需要得到最终的标志（唯一真正重要的标志！！！）。<br>这里没有提示——你现在只能靠自己了。  :-)<br>快离开这里！！！！</p>
+<p><img src="/images/DC2_22.png" alt="DC2_22"></p>
+<h4 id="3、提权"><a href="#3、提权" class="headerlink" title="3、提权"></a>3、提权</h4><p>虽然说是没有任何提示，但是我敏锐的发现了一个单词“git”，是在提示我使用git提权吗?</p>
+<p>sudo -l 列出当前用户被允许执行的 sudo 命令，看一下发现&#x2F;usr&#x2F;bin&#x2F;git不需要root权限</p>
+<p><img src="/images/DC2_23.png" alt="DC2_23"></p>
+<p>这里我们主要使用suid提权（suid可以让调用者以文件拥有者的身份运行该文件）</p>
+<p>下面我们使用</p>
+<ul>
+<li>find &#x2F;-user root -perm -4000 -print 2&gt;&#x2F;dev&#x2F;null</li>
+<li>find &#x2F; -perm -u&#x3D;s -type f 2&gt;&#x2F;dev&#x2F;null</li>
+<li>find &#x2F; -user root -perm -4000 -exec Is -ldb {} ;</li>
+</ul>
+<p>排查可知，namp、vim、bash、more、less、namo可以用于提权</p>
+<p><img src="/images/DC2_24.png" alt="DC2_24"></p>
+<p>接下来输入<strong>sudo git -p –help</strong>后再输入**!&#x2F;bin&#x2F;bash**成功提权至root</p>
+<p><img src="/images/DC2_26.png" alt="DC2_26"></p>
+<h3 id="三、知识点"><a href="#三、知识点" class="headerlink" title="三、知识点"></a>三、知识点</h3><h4 id="1、什么是-rbash？"><a href="#1、什么是-rbash？" class="headerlink" title="1、什么是 rbash？"></a>1、什么是 rbash？</h4><p><strong>rbash</strong> 是 Bash 的一种受限运行模式，全称 Restricted Bash。<br>在 Linux 系统中，可以通过以下几种方式进入 rbash：</p>
+<ul>
+<li>直接执行 <code>rbash</code> 命令（通常是 <code>/bin/rbash</code>，它实际上是一个指向 <code>/bin/bash</code> 的硬链接或拷贝，bash 检测到自己的名字是 <code>rbash</code> 后就会进入受限模式）。</li>
+<li>使用 <code>bash -r</code> 或 <code>bash --restricted</code> 启动。</li>
+<li>将用户的登录 shell 设置为 <code>/bin/rbash</code>（例如在 <code>/etc/passwd</code> 中），这样用户登录后自动进入受限环境。</li>
+</ul>
+<p>核心思想是：<strong>为不可信用户提供一个功能受限的 Shell，限制其对系统的操作能力，但又允许执行少量必需的命令。</strong></p>
+<hr>
+<h4 id="2、rbash-的具体限制"><a href="#2、rbash-的具体限制" class="headerlink" title="2、rbash 的具体限制"></a>2、rbash 的具体限制</h4><p>当 Bash 以受限模式运行时，<strong>以下行为被禁止</strong>：</p>
+<table>
+<thead>
+<tr>
+<th align="left">限制类型</th>
+<th align="left">具体表现</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>目录跳转</strong></td>
+<td align="left">禁止使用 <code>cd</code> 命令改变工作目录</td>
+</tr>
+<tr>
+<td align="left"><strong>环境变量</strong></td>
+<td align="left">不能修改 <code>SHELL</code>、<code>PATH</code>、<code>ENV</code>、<code>BASH_ENV</code> 等关键变量（但可以通过 <code>export</code> 新增或覆盖其他变量）</td>
+</tr>
+<tr>
+<td align="left"><strong>命令路径</strong></td>
+<td align="left">执行的命令 **不能包含斜杠 <code>/</code>**，即不能指定绝对路径或相对路径来运行命令（如 <code>/bin/sh</code>、<code>./script</code>）</td>
+</tr>
+<tr>
+<td align="left"><strong>重定向</strong></td>
+<td align="left">禁止使用 <code>&gt;</code>、<code>&gt;&gt;</code>、<code>&lt;</code>、<code>&lt;&gt;</code>、<code>&gt;&amp;</code> 等重定向操作符</td>
+</tr>
+<tr>
+<td align="left"><strong>内置命令限制</strong></td>
+<td align="left">禁止使用 <code>enable</code> 来启用或禁用内置命令；禁止用 <code>command -p</code> 运行命令</td>
+</tr>
+<tr>
+<td align="left"><strong>SHELLOPTS &#x2F; BASHOPTS</strong></td>
+<td align="left">不能修改这些只读变量</td>
+</tr>
+<tr>
+<td align="left"><strong>函数定义</strong></td>
+<td align="left">允许定义函数，但函数体内不允许包含重定向等受限操作</td>
+</tr>
+<tr>
+<td align="left"><strong>退出方式</strong></td>
+<td align="left">不能用 <code>exec</code> 替换当前 shell，但可以用 <code>exit</code> 退出</td>
+</tr>
+<tr>
+<td align="left"><strong>文件描述符</strong></td>
+<td align="left">禁止显式移动或关闭文件描述符（如 <code>exec &gt;&amp;2</code>）</td>
+</tr>
+</tbody></table>
+<p>此外，管理员通常还会配合其它手段增强限制：</p>
+<ul>
+<li>设置一个极简的 <code>PATH</code>（如 <code>/home/user/bin</code> 且该目录下只有少数几个安全命令）。</li>
+<li>将用户的家目录权限设为不可写，防止用户添加恶意文件。</li>
+<li>移除或限制用户对某些命令的访问（通过文件权限）。</li>
+</ul>
+<hr>
+<h4 id="3、rbash-的常见用途"><a href="#3、rbash-的常见用途" class="headerlink" title="3、rbash 的常见用途"></a>3、rbash 的常见用途</h4><ul>
+<li><strong>蜜罐&#x2F;CTF 靶机</strong>：模拟一个受限环境，要求参与者绕过限制进行提权。</li>
+<li><strong>受限远程访问</strong>：给外部人员一个仅能执行特定命令的 Shell，比如只允许查看日志、重启服务等。</li>
+<li><strong>跳板机&#x2F;堡垒机</strong>：在用户登录后限制其操作范围，防止误操作或恶意行为。</li>
+<li><strong>应用容器</strong>：某些 Docker 容器或 Jail 环境内使用 rbash 作为初始 Shell。</li>
+</ul>
+<p>本质上，它是一种 <strong>安全边界</strong>，但 rbash 本身<strong>并不是一个完整的安全解决方案</strong>，因为其设计存在许多绕过方法。</p>
+<hr>
+<h4 id="4、rbash-逃逸的基本思想"><a href="#4、rbash-逃逸的基本思想" class="headerlink" title="4、rbash 逃逸的基本思想"></a>4、rbash 逃逸的基本思想</h4><p>rbash 的限制主要集中在：</p>
+<ol>
+<li>不能运行带 <code>/</code> 的程序 → 必须通过系统路径中的命令运行；</li>
+<li>不能改变目录 → 无法访问其他目录下的工具；</li>
+<li>不能重定向输出 → 限制了数据写出；</li>
+<li>不能修改 <code>SHELL</code> 和 <code>PATH</code> 等环境变量 → 维持受限环境。</li>
+</ol>
+<p>逃逸的核心思路是：<strong>利用受限环境中仍然可用的命令或功能，打破上述某一项或多项限制，最终获得一个不受限的 Shell。</strong><br>常见突破口包括：</p>
+<ul>
+<li>利用允许的命令内置的“执行外部命令”功能（如 <code>vi</code>、<code>man</code>、<code>find</code>、<code>less</code> 等）。</li>
+<li>利用 Shell 自身的特性（如变量、函数、数组）注入或重新定义命令。</li>
+<li>利用编程语言解释器（Python、Perl、Ruby 等）直接调用系统调用。</li>
+<li>利用环境变量传递中的逻辑漏洞（如 <code>BASH_CMDS</code> 哈希表污染）。</li>
+<li>如果系统存在配置错误（如 SUID 文件、<code>sudo</code> 配置不当），则可以借助它们直接提权到更高权限，从而绕过 rbash。</li>
+</ul>
+<hr>
+<h4 id="5、常见逃逸技术详解（附实例）"><a href="#5、常见逃逸技术详解（附实例）" class="headerlink" title="5、常见逃逸技术详解（附实例）"></a>5、常见逃逸技术详解（附实例）</h4><p>以下所有方法均假设当前处于 rbash 环境中，且无法执行 <code>cd</code>、无法使用 <code>/</code> 指定命令路径。</p>
+<h5 id="1-利用能产生子-Shell-的编辑器-工具"><a href="#1-利用能产生子-Shell-的编辑器-工具" class="headerlink" title="(1) 利用能产生子 Shell 的编辑器&#x2F;工具"></a>(1) 利用能产生子 Shell 的编辑器&#x2F;工具</h5><p>很多命令行工具允许用户在内部执行 Shell 命令：</p>
+<h6 id="①-vi-vim"><a href="#①-vi-vim" class="headerlink" title="① vi &#x2F; vim"></a>① vi &#x2F; vim</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vi</span><br><span class="line">:set shell=/bin/sh</span><br><span class="line">:shell</span><br></pre></td></tr></table></figure>
+
+<p>或在命令模式下直接输入：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:!bash</span><br></pre></td></tr></table></figure>
+
+<h6 id="②-man-less-more"><a href="#②-man-less-more" class="headerlink" title="② man &#x2F; less &#x2F; more"></a>② man &#x2F; less &#x2F; more</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">man man</span><br><span class="line">!bash</span><br></pre></td></tr></table></figure>
+
+<p>在 man 的分页器（通常是 less）中输入 <code>!</code> 可以执行命令。同样地，直接运行 <code>less /etc/passwd</code>（若允许）后输入 <code>!bash</code> 即可。</p>
+<h6 id="③-ed"><a href="#③-ed" class="headerlink" title="③ ed"></a>③ ed</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ed</span><br><span class="line">!bash</span><br></pre></td></tr></table></figure>
+
+<h6 id="④-nano-pico"><a href="#④-nano-pico" class="headerlink" title="④ nano &#x2F; pico"></a>④ nano &#x2F; pico</h6><p>如果编译时支持，按 <code>Ctrl+T</code> 可能打开“拼写检查”功能，其中可以调用外部命令，或者在文件浏览器中（如果版本足够新）选择执行命令。</p>
+<h5 id="2-利用-find-awk-等命令的-exec-功能"><a href="#2-利用-find-awk-等命令的-exec-功能" class="headerlink" title="(2) 利用 find &#x2F; awk 等命令的 -exec 功能"></a>(2) 利用 find &#x2F; awk 等命令的 <code>-exec</code> 功能</h5><p>如果 <code>find</code> 在 PATH 中可用：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find / -name anything -exec /bin/bash -p \; -quit</span><br></pre></td></tr></table></figure>
+
+<p>因为 <code>find</code> 命令本身不带斜杠，符合 rbash 规则；而 <code>-exec</code> 会执行参数中指定的程序，<strong>rbash 不会限制通过 <code>-exec</code> 启动的进程</strong>，因此可以启动一个完整的 bash。<br>同理，<code>awk</code> 的 <code>system()</code> 函数：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">awk &#x27;BEGIN &#123;system(&quot;/bin/sh&quot;)&#125;&#x27;</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="3-利用脚本语言解释器"><a href="#3-利用脚本语言解释器" class="headerlink" title="(3)利用脚本语言解释器"></a>(3)利用脚本语言解释器</h5><p>如果系统安装了 Python、Perl、Ruby、PHP 等，几乎总能逃逸：</p>
+<p>bash</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">python -c &#x27;import os; os.system(&quot;/bin/bash&quot;)&#x27;</span><br><span class="line">python3 -c &#x27;import pty; pty.spawn(&quot;/bin/bash&quot;)&#x27;</span><br><span class="line">perl -e &#x27;exec &quot;/bin/sh&quot;;&#x27;</span><br><span class="line">ruby -e &#x27;exec &quot;/bin/sh&quot;&#x27;</span><br><span class="line">php -r &#x27;system(&quot;/bin/sh&quot;);&#x27;</span><br><span class="line">lua -e &#x27;os.execute(&quot;/bin/sh&quot;)&#x27;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>即便不能直接指定绝对路径，只要这些解释器在 PATH 中（如 <code>/usr/bin/python</code>），且 rbash 仅禁止命令含 <code>/</code>，用户可以直接输入 <code>python</code> 运行解释器，然后在解释器内部调用绝对路径运行 shell。</p>
+<h5 id="4-利用-Shell-内部机制注入命令（BASH-CMDS-逃逸）"><a href="#4-利用-Shell-内部机制注入命令（BASH-CMDS-逃逸）" class="headerlink" title="(4) 利用 Shell 内部机制注入命令（BASH_CMDS 逃逸）"></a>(4) 利用 Shell 内部机制注入命令（BASH_CMDS 逃逸）</h5><p>这是你在 DC-2 中使用的技巧。解释如下：</p>
+<p>在 Bash 中，有一个名为 <code>BASH_CMDS</code> 的关联数组，用于缓存命令的完整路径。<br>rbash 虽然禁止修改 <code>PATH</code>，但<strong>并不禁止操作 <code>BASH_CMDS</code> 数组</strong>。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">BASH_CMDS[a]=/bin/sh</span><br><span class="line">a</span><br></pre></td></tr></table></figure>
+
+<p>第一行将键 <code>a</code> 对应的命令设置为 <code>/bin/sh</code>。<br>第二行执行 <code>a</code>，Bash 会在 <code>BASH_CMDS</code> 中查找 <code>a</code>，找到后直接执行 <code>/bin/sh</code>，从而启动一个不受限制的子 Shell。</p>
+<p>这一技巧的精妙之处在于：<strong>绕过了“禁止命令含斜杠”的限制</strong>，因为 <code>a</code> 本身不含 <code>/</code>，但 Bash 内部却会执行带 <code>/</code> 的路径。</p>
+<p>类似地，可以通过函数覆盖来逃逸：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">foo() &#123; /bin/sh; &#125;</span><br><span class="line">foo</span><br></pre></td></tr></table></figure>
+
+<p>虽然定义了函数，但 rbash 在函数体内<strong>不检查斜杠限制</strong>（取决于 Bash 版本，某些老版本可以），因此函数执行时会直接运行 <code>/bin/sh</code>。</p>
+<h5 id="5-利用命令行参数启动新-Shell-打破限制"><a href="#5-利用命令行参数启动新-Shell-打破限制" class="headerlink" title="(5) 利用命令行参数启动新 Shell 打破限制"></a>(5) 利用命令行参数启动新 Shell 打破限制</h5><p>如果 Bash 允许带参数执行（取决于管理员是否过滤参数），可以尝试：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash --noprofile --norc</span><br></pre></td></tr></table></figure>
+
+<p>但在 rbash 中，<code>bash</code> 本身可能也以受限模式启动，如果新 Shell 同样受限则无效。可以加上 <code>--posix</code> 或尝试 <code>rbash</code> 本身：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rbash -i  # 有时新的交互式 rbash 会重置某些限制</span><br></pre></td></tr></table></figure>
+
+<p>但通常没有直接帮助，不如前述方法可靠。</p>
+<h5 id="6-利用环境变量传递（SHELLOPTS-等）"><a href="#6-利用环境变量传递（SHELLOPTS-等）" class="headerlink" title="(6) 利用环境变量传递（SHELLOPTS 等）"></a>(6) 利用环境变量传递（SHELLOPTS 等）</h5><p>早期 Bash 版本（如 4.3 以前）可能存在漏洞：如果在启动 rbash 之前设置 <code>SHELLOPTS=...</code> 或 <code>BASHOPTS=...</code>，可以强制禁用受限模式。不过现代系统已经修复，此方法仅适用于老旧环境。</p>
+<h5 id="7-利用-SUID-Sudo-配置缺陷"><a href="#7-利用-SUID-Sudo-配置缺陷" class="headerlink" title="(7)利用 SUID &#x2F; Sudo 配置缺陷"></a>(7)利用 SUID &#x2F; Sudo 配置缺陷</h5><p>如果系统中有 SUID 程序，或者 <code>sudo</code> 允许执行特定程序且配置不当（如 <code>sudo /bin/bash</code>、<code>sudo -u root /bin/sh</code>），则可以直接提升权限，一旦获得更高权限用户的 Shell，rbash 的限制自然失效。<br>例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo -l   # 查看可执行的 sudo 命令</span><br><span class="line">sudo /bin/bash</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="8-利用动态链接库劫持（LD-PRELOAD）"><a href="#8-利用动态链接库劫持（LD-PRELOAD）" class="headerlink" title="(8) 利用动态链接库劫持（LD_PRELOAD）"></a>(8) 利用动态链接库劫持（LD_PRELOAD）</h5><p>虽然 rbash 禁止修改 <code>LD_PRELOAD</code> 等变量，但如果有办法预先设置（如通过 SSH 的 <code>SendEnv</code>），或者在不受限的环境下启动某些程序，则可劫持函数调用，但这对纯 rbash 环境通常不适用，因为无法写入文件或设置环境。</p>
+<hr>
+<h4 id="6、DC-2-靶机案例回顾"><a href="#6、DC-2-靶机案例回顾" class="headerlink" title="6、DC-2 靶机案例回顾"></a>6、DC-2 靶机案例回顾</h4><p>我之前的操作：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">tom@DC-2:~$ su jerry                # 切换用户时触发 rbash 报错</span><br><span class="line">-rbash: cd: restricted</span><br><span class="line">tom@DC-2:~$ BASH_CMDS[a]=/bin/sh;a  # 利用哈希表逃逸</span><br><span class="line">$ /bin/bash                         # 确认逃逸后启动干净 bash</span><br><span class="line">tom@DC-2:~$ export PATH=$PATH:/bin/     # 修复 PATH</span><br><span class="line">tom@DC-2:~$ export PATH=$PATH:/usr/bin/</span><br></pre></td></tr></table></figure>
+
+<p>第一步 <code>su jerry</code> 失败是因为 <code>su</code> 内部会尝试 <code>cd</code> 到目标用户家目录，而 rbash 禁止 <code>cd</code>。<br>第二步使用了经典的 <code>BASH_CMDS</code> 污染，成功获得一个无限制的子 Shell（提示符变为了 <code>$</code>）。<br>第三步执行的 <code>/bin/bash</code> 实际上是新 Shell 中的操作，确保彻底离开受限环境（父 Shell 仍是 rbash，但不影响子进程）。<br>最后两步恢复了 PATH 环境变量，使得 <code>ls</code>、<code>cat</code> 等基本命令可用，为后续提权做准备。</p>
+<hr>
+<h4 id="7、如何防御-rbash-逃逸？"><a href="#7、如何防御-rbash-逃逸？" class="headerlink" title="7、如何防御 rbash 逃逸？"></a>7、如何防御 rbash 逃逸？</h4><p>管理员如果希望 rbash 变得可靠，需要采取纵深防御策略：</p>
+<ul>
+<li><strong>严格控制 PATH</strong>：将 PATH 设为一个只包含绝对安全程序的目录，不包含 <code>vi</code>、<code>man</code>、<code>find</code>、<code>awk</code>、<code>python</code> 等可用于逃逸的程序。</li>
+<li><strong>移除或禁用危险命令</strong>：直接删除或限制用户对这些二进制文件的执行权限（chmod 700 目录等）。</li>
+<li><strong>使用受限文件系统</strong>：采用 <code>chroot</code>、<code>jail</code> 或 Linux 命名空间&#x2F;容器技术，将用户的文件系统可见范围缩小到最小。</li>
+<li><strong>禁止 Shell 解释器</strong>：如果不需要脚本语言，就不要安装 Python&#x2F;Perl 等。</li>
+<li><strong>限制 Bash 版本并打补丁</strong>：使用最新版 Bash，确保已知逃逸漏洞被修复。</li>
+<li><strong>配合 <code>seccomp</code> 或 AppArmor&#x2F;SELinux</strong>：通过强制访问控制进一步限制进程能执行的系统调用和文件。</li>
+<li><strong>不以 rbash 作为唯一防线</strong>：rbash 本质是“软限制”，只能防君子不能防高手，真正的安全需要靠权限隔离、强制访问控制和监控。</li>
+</ul>
+<hr>
+<h4 id="8、总结"><a href="#8、总结" class="headerlink" title="8、总结"></a>8、总结</h4><ul>
+<li><strong>rbash</strong> 通过禁用目录跳转、禁止命令含斜杠、禁止重定向、锁定环境变量等手段来限制用户操作。</li>
+<li><strong>rbash 逃逸</strong>的核心是利用环境中残留的、能够执行外部命令的工具（编辑器、分页器、查找工具、脚本语言）或者利用 Bash 内部数据结构（如 <code>BASH_CMDS</code>、函数定义）绕过限制。</li>
+<li>熟知这些方法，无论是对于 CTF 玩家、安全测试人员，还是系统管理员加固系统，都具有重要意义。</li>
+<li>防御时必须将 rbash 置于多层安全措施之后，切不可将其视为坚不可摧的屏障。</li>
+</ul>
+</div></article><aside class="post-outline post-outline--desktop" aria-label="文章目录"><p class="post-outline__eyebrow">本文导航</p><p class="post-outline__title">章节概览</p><nav class="post-toc" data-post-toc></nav></aside></div><nav class="post-nav"><a class="post-nav__item post-nav__item--next" href="/2026/06/07/%E7%BD%91%E5%AE%89/"><span class="post-nav__label">下一篇</span><strong>网安</strong></a></nav></main><footer class="site-footer"><p class="site-footer__text">Ryxer</p><p class="site-footer__license">本站内容采用<a href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh-hans" target="_blank" rel="noopener"> CC BY-NC 4.0 </a>协议发布</p></footer></div></body></html>
