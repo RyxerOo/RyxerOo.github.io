@@ -2,7 +2,7 @@
   --accent: #496b8c;
   --accent-strong: color-mix(in srgb, #496b8c 62%, #223142);
   --accent-soft: #dce8f0;
-}</style><link rel="stylesheet" href="/css/hsad-theme.css"><script src="/js/hsad-theme.js" defer></script></head><body class="view-inner view-post"><div class="reading-progress" aria-hidden="true"><span class="reading-progress__bar" data-reading-progress></span></div><div class="page-aura page-aura--one"></div><div class="page-aura page-aura--two"></div><div class="site-shell"><aside class="site-sidebar"><section class="sidebar sidebar--desktop"><div class="sidebar__backdrop" style="background-image:url(/images/1.jpg)"></div><div class="sidebar__overlay"></div><div class="sidebar__content"><a class="sidebar__brand" href="/"><img class="sidebar__avatar" src="/images/y.jpg" alt="Ryxer is here"><div class="sidebar__identity"><h2 class="sidebar__title">Ryxer</h2><p class="sidebar__subtitle">闲邪存其诚</p></div></a><p class="sidebar__description">天行健，君子以自强不息</p><nav class="sidebar__nav" aria-label="Primary"><a href="/">首页</a><a href="/archives/">归档</a><a href="/categories/">分类</a><a href="/tags/">标签</a><a href="/links/">友情链</a><a href="/about/">关于</a></nav><div class="sidebar__social"><a href="https://github.com/ryxeroo" target="_blank" rel="noopener">GitHub</a><a href="mailto:2024728478@qq.com" target="_blank" rel="noopener">E-Mail</a></div></div></section></aside><div class="mobile-topbar"><button class="mobile-topbar__toggle js-drawer-toggle" type="button" aria-label="Open navigation"><span></span><span></span><span></span></button><a class="mobile-topbar__title" href="/">Ryxer</a><a class="mobile-topbar__avatar" href="/"><img src="/images/y.jpg" alt="Ryxer is here"></a></div><div class="mobile-drawer" data-drawer aria-hidden="true"><div class="mobile-drawer__panel"><section class="sidebar sidebar--mobile"><div class="sidebar__backdrop" style="background-image:url(/images/1.jpg)"></div><div class="sidebar__overlay"></div><div class="sidebar__content"><a class="sidebar__brand" href="/"><img class="sidebar__avatar" src="/images/y.jpg" alt="Ryxer is here"><div class="sidebar__identity"><h2 class="sidebar__title">Ryxer</h2><p class="sidebar__subtitle">闲邪存其诚</p></div></a><p class="sidebar__description">天行健，君子以自强不息</p><nav class="sidebar__nav" aria-label="Primary"><a href="/">首页</a><a href="/archives/">归档</a><a href="/categories/">分类</a><a href="/tags/">标签</a><a href="/links/">友情链</a><a href="/about/">关于</a></nav><div class="sidebar__social"><a href="https://github.com/ryxeroo" target="_blank" rel="noopener">GitHub</a><a href="mailto:2024728478@qq.com" target="_blank" rel="noopener">E-Mail</a></div></div></section></div></div><div class="mobile-backdrop js-drawer-close"></div><main class="site-main"><div class="article-layout article-layout--with-toc"><article class="article"><header class="article__header"><div class="article__eyebrow"><a href="/categories/%E9%9D%A2%E8%AF%95/">面试</a></div><h1 class="article__title">myself</h1><div class="article__meta"><time datetime="2026-06-05T08:31:36.000Z">2026-06-05</time><span class="article__divider">/</span><span>更新于 2026-06-08</span></div><div class="article__tags"><a class="article__tag" href="/tags/rem/">rem</a></div></header><details class="post-outline post-outline--mobile"><summary class="post-outline__summary"><span>本文导航</span><small>按标题快速定位</small></summary><nav class="post-toc" data-post-toc><ol class="post-toc__list"><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#1-sqlmap-%E6%80%8E%E4%B9%88%E6%8B%BFshell"><span class="post-toc__list-text">1. sqlmap 怎么拿shell</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#2-MySQL-%E9%80%9A%E8%BF%87%E6%B3%A8%E5%85%A5%E7%82%B9%E6%8F%90%E6%9D%83%E6%96%B9%E6%B3%95"><span class="post-toc__list-text">2. MySQL 通过注入点提权方法</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#3-MySQL-%E5%BB%B6%E6%97%B6%E6%B3%A8%E5%85%A5%E5%85%B3%E9%94%AE%E5%87%BD%E6%95%B0%EF%BC%8C%E5%85%A8%E8%A2%AB%E8%BF%87%E6%BB%A4%E6%80%8E%E4%B9%88%E5%8A%9E"><span class="post-toc__list-text">3. MySQL 延时注入关键函数，全被过滤怎么办</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#4-sqlmap-%E4%B8%AD-os-shell-%E6%89%A7%E8%A1%8C%E7%9A%84%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86"><span class="post-toc__list-text">4. sqlmap 中 --os-shell 执行的底层原理</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#5-%E6%98%AF%E5%90%A6%E4%BC%9A%E5%86%99%E8%84%9A%E6%9C%AC%EF%BC%8C%E9%83%BD%E5%9C%A8%E4%BB%80%E4%B9%88%E6%83%85%E5%86%B5%E4%B8%8B%E5%86%99%E4%BB%80%E4%B9%88%E6%A0%B7%E7%9A%84%E8%84%9A%E6%9C%AC"><span class="post-toc__list-text">5. 是否会写脚本，都在什么情况下写什么样的脚本</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#6-%E5%8F%AF%E7%96%91%E8%BF%9B%E7%A8%8B%E5%8D%A0%E7%94%A8-80-%E7%AB%AF%E5%8F%A3%EF%BC%8C%E6%9F%A5%E8%AF%A2%E6%B2%A1%E6%9C%89%E8%BF%9B%E7%A8%8B%E5%8F%B7%EF%BC%8C%E6%80%8E%E4%B9%88%E6%8E%92%E6%9F%A5"><span class="post-toc__list-text">6. 可疑进程占用 80 端口，查询没有进程号，怎么排查</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#7-%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0"><span class="post-toc__list-text">7. 文件上传</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#8-%E7%99%BD%E5%90%8D%E5%8D%95%E7%BB%95%E8%BF%87"><span class="post-toc__list-text">8. 白名单绕过</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#9-%E8%9A%81%E5%89%91%E3%80%81%E5%86%B0%E8%9D%8E%E3%80%81%E5%93%A5%E6%96%AF%E6%8B%89%E7%AD%89%E6%94%BB%E5%87%BB%E6%B5%81%E9%87%8F%E7%89%B9%E5%BE%81"><span class="post-toc__list-text">9. 蚁剑、冰蝎、哥斯拉等攻击流量特征</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#10-XSS-%E5%AD%98%E5%82%A8%E5%9E%8B%E6%8F%90%E6%9D%83%E6%96%B9%E6%B3%95"><span class="post-toc__list-text">10. XSS 存储型提权方法</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#11-SSRF"><span class="post-toc__list-text">11. SSRF</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#12-%E6%8B%BF%E5%88%B0%E4%B8%80%E4%B8%AA-web-%E9%A1%B5%E9%9D%A2%E4%BD%A0%E6%80%8E%E4%B9%88%E8%BF%9B%E8%A1%8C%E6%B8%97%E9%80%8F%EF%BC%9F"><span class="post-toc__list-text">12. 拿到一个 web 页面你怎么进行渗透？</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#13-%E9%AB%98%E5%8D%B1%E6%BC%8F%E6%B4%9E%E7%89%B9%E7%82%B9"><span class="post-toc__list-text">13. 高危漏洞特点</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#14-%E9%AB%98%E5%8D%B1%E3%80%81%E4%B8%AD%E5%8D%B1%E3%80%81%E4%BD%8E%E5%8D%B1%E6%BC%8F%E6%B4%9E%E8%AF%84%E5%88%86"><span class="post-toc__list-text">14. 高危、中危、低危漏洞评分</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#15-%E6%B8%97%E9%80%8F%E3%80%81%E5%BA%94%E6%80%A5%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%80%9D%E8%B7%AF%E4%BB%A5%E5%8F%8A%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%94%A8%E4%BB%80%E4%B9%88%E5%91%BD%E4%BB%A4"><span class="post-toc__list-text">15. 渗透、应急的基本思路以及过程中用什么命令</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#16-%E4%BD%A0%E5%9C%A8%E9%A1%B9%E7%9B%AE%E8%BF%87%E7%A8%8B%E4%B8%AD%E6%9C%89%E6%B2%A1%E6%9C%89%E9%81%87%E8%A7%81%E4%BB%80%E4%B9%88%E9%97%AE%E9%A2%98%EF%BC%8C%E4%BD%A0%E6%98%AF%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3%E7%9A%84"><span class="post-toc__list-text">16. 你在项目过程中有没有遇见什么问题，你是如何解决的</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#17-%E5%A6%82%E6%9E%9C%E4%BD%A0%E6%8C%96%E7%9A%84%E4%B8%AD%E5%8D%B1%E6%BC%8F%E6%B4%9E%E8%A2%AB%E9%99%8D%E7%BA%A7%EF%BC%8C%E5%A6%82%E4%BD%95%E8%AF%B4%E6%9C%8D%E5%AF%B9%E6%96%B9%EF%BC%9F"><span class="post-toc__list-text">17. 如果你挖的中危漏洞被降级，如何说服对方？</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#18-AWD-%E6%AF%94%E8%B5%9B%E6%97%B6%E9%98%9F%E5%8F%8B%E6%84%8F%E8%A7%81%E5%88%86%E6%AD%A7%EF%BC%8C%E4%BD%A0%E6%80%8E%E4%B9%88%E5%81%9A"><span class="post-toc__list-text">18. AWD 比赛时队友意见分歧，你怎么做</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#19-%E9%A2%86%E5%AF%BC%E8%AF%B4%E2%80%9C%E6%8B%BF%E5%88%B0%E6%88%91%E8%BA%AB%E4%BB%BD%E4%BF%A1%E6%81%AF%E5%8F%88%E8%83%BD%E6%80%8E%E6%A0%B7%EF%BC%9F%E2%80%9D%E4%BD%A0%E8%AF%A5%E5%A6%82%E4%BD%95%E5%BA%94%E5%AF%B9"><span class="post-toc__list-text">19. 领导说“拿到我身份信息又能怎样？”你该如何应对</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#20-%E4%BD%A0%E5%AF%B9%E7%9B%AE%E5%89%8D%E5%AE%89%E5%85%A8%E8%A1%8C%E4%B8%9A%E6%9C%89%E4%BB%80%E4%B9%88%E9%97%AE%E9%A2%98%EF%BC%9F%E6%80%8E%E4%B9%88%E6%94%B9%E8%BF%9B"><span class="post-toc__list-text">20. 你对目前安全行业有什么问题？怎么改进</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#21-%E7%BB%99%E4%BD%A0%E4%B8%80%E4%B8%AA%E5%85%AC%E5%8F%B8%E5%90%8D%E7%A7%B0%E4%BD%A0%E8%A6%81%E6%80%8E%E4%B9%88%E8%BF%9B%E8%A1%8C%E6%B8%97%E9%80%8F%EF%BC%9F"><span class="post-toc__list-text">21. 给你一个公司名称你要怎么进行渗透？</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#22-SQL%E6%B3%A8%E5%85%A5%E7%9A%84%E5%8E%9F%E7%90%86%E5%92%8C%E9%98%B2%E8%8C%83"><span class="post-toc__list-text">22. SQL注入的原理和防范</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#23-Linux%E7%99%BB%E5%BD%95%E6%88%90%E5%8A%9F%E7%9A%84%E6%97%A5%E5%BF%97%E5%AD%98%E6%94%BE%E7%9B%AE%E5%BD%95"><span class="post-toc__list-text">23. Linux登录成功的日志存放目录</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#24-Linux%E6%9F%A5%E7%9C%8B%E8%BF%9B%E7%A8%8B%E7%9A%84%E5%91%BD%E4%BB%A4%EF%BC%8C%E6%80%8E%E4%B9%88%E5%88%A4%E6%96%AD%E6%8E%92%E6%9F%A5%E6%81%B6%E6%84%8F%E8%BF%9B%E7%A8%8B%EF%BC%9F"><span class="post-toc__list-text">24. Linux查看进程的命令，怎么判断排查恶意进程？</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#25-Linux%E6%9F%A5%E7%9C%8B%E8%AE%A1%E5%88%92%E4%BB%BB%E5%8A%A1%E7%9A%84%E5%91%BD%E4%BB%A4"><span class="post-toc__list-text">25. Linux查看计划任务的命令</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#26-PHP%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E7%9A%84%E5%8E%9F%E5%9B%A0"><span class="post-toc__list-text">26. PHP反序列化的原因</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#27-%E7%9C%8B%E5%91%8A%E8%AD%A6%E6%80%8E%E4%B9%88%E5%88%A4%E6%96%ADWebshell%E4%B8%8A%E4%BC%A0%E6%98%AF%E5%90%A6%E6%88%90%E5%8A%9F%EF%BC%8C%E5%A6%82%E6%9E%9C%E5%88%A4%E6%96%AD%E5%87%BA%E6%9D%A5%E4%B8%8A%E4%BC%A0%E6%88%90%E5%8A%9F%E6%80%8E%E4%B9%88%E5%8E%BB%E5%A4%84%E7%90%86%EF%BC%9F"><span class="post-toc__list-text">27. 看告警怎么判断Webshell上传是否成功，如果判断出来上传成功怎么去处理？</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#28-Python%E7%88%AC%E8%99%AB%E5%B8%B8%E7%94%A8%E7%9A%84%E5%BA%93"><span class="post-toc__list-text">28. Python爬虫常用的库</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#29-%E6%8B%BF%E5%88%B0%E4%B8%80%E4%B8%AA%E7%99%BB%E5%BD%95%E6%A1%86%E9%99%A4%E4%BA%86%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3%E3%80%81%E4%B8%87%E8%83%BD%E5%AF%86%E7%A0%81%E8%BF%98%E8%83%BD%E5%81%9A%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="post-toc__list-text">29. 拿到一个登录框除了暴力破解、万能密码还能做什么？</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#30%E3%80%81%E9%AB%98%E5%8D%B1%E7%AB%AF%E5%8F%A3"><span class="post-toc__list-text">30、高危端口</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#31%E3%80%81Qzzty%E6%98%AF%E6%80%8E%E4%B9%88%E5%81%9A%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E7%9A%84%EF%BC%9F"><span class="post-toc__list-text">31、Qzzty是怎么做信息收集的？</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#32%E3%80%81Qzzty%E5%A6%82%E4%BD%95%E5%A4%84%E7%90%86%E5%AD%90%E5%9F%9F%E5%90%8D%E7%88%86%E7%A0%B4%E7%9A%84%E6%B3%9B%E8%A7%A3%E6%9E%90%E9%97%AE%E9%A2%98"><span class="post-toc__list-text">32、Qzzty如何处理子域名爆破的泛解析问题</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#33%E3%80%81Qzzty%E5%A6%82%E4%BD%95%E7%BB%95%E8%BF%87-CDN-%E6%9F%A5%E6%89%BE%E7%9C%9F%E5%AE%9E-IP"><span class="post-toc__list-text">33、Qzzty如何绕过 CDN 查找真实 IP</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#34%E3%80%81%E5%A6%82%E6%9E%9C%E7%BB%99Qzzty%E4%B8%80%E5%9C%BA%E6%94%BB%E9%98%B2%E6%BC%94%E7%BB%83%EF%BC%8CQzzty%E4%BC%9A%E6%80%8E%E4%B9%88%E6%89%93"><span class="post-toc__list-text">34、如果给Qzzty一场攻防演练，Qzzty会怎么打</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#35%E3%80%81Qzzty%E8%AE%B2%E8%AE%B2xss%E6%BC%8F%E6%B4%9E%E7%9A%84%E5%8E%9F%E7%90%86%EF%BC%8C%E5%88%A9%E7%94%A8%EF%BC%8C%E9%98%B2%E5%BE%A1%EF%BC%8C%E5%8F%8D%E5%B0%84%E5%9E%8B%EF%BC%8C%E5%AD%98%E5%82%A8%E5%9E%8B%EF%BC%8CDOM%E5%9E%8Bxss%E7%9A%84%E6%A0%B8%E5%BF%83%E5%8C%BA%E5%88%AB"><span class="post-toc__list-text">35、Qzzty讲讲xss漏洞的原理，利用，防御，反射型，存储型，DOM型xss的核心区别</span></a></li></ol></nav></details><div class="article__content"><h3 id="1-sqlmap-怎么拿shell"><a href="#1-sqlmap-怎么拿shell" class="headerlink" title="1. sqlmap 怎么拿shell"></a><strong>1. sqlmap 怎么拿shell</strong></h3><p>使用 <code>--os-shell</code>，前提是数据库有写文件权限、知道网站绝对路径，且 <code>secure_file_priv</code> 允许。sqlmap 会自动写入对应语言的 webshell（如 PHP&#x2F;ASP&#x2F;JSP），然后通过它执行命令。</p>
+}</style><link rel="stylesheet" href="/css/hsad-theme.css"><script src="/js/hsad-theme.js" defer></script></head><body class="view-inner view-post"><div class="reading-progress" aria-hidden="true"><span class="reading-progress__bar" data-reading-progress></span></div><div class="page-aura page-aura--one"></div><div class="page-aura page-aura--two"></div><div class="site-shell"><aside class="site-sidebar"><section class="sidebar sidebar--desktop"><div class="sidebar__backdrop" style="background-image:url(/images/1.jpg)"></div><div class="sidebar__overlay"></div><div class="sidebar__content"><a class="sidebar__brand" href="/"><img class="sidebar__avatar" src="/images/y.jpg" alt="Ryxer is here"><div class="sidebar__identity"><h2 class="sidebar__title">Ryxer</h2><p class="sidebar__subtitle">闲邪存其诚</p></div></a><p class="sidebar__description">天行健，君子以自强不息</p><nav class="sidebar__nav" aria-label="Primary"><a href="/">首页</a><a href="/archives/">归档</a><a href="/categories/">分类</a><a href="/tags/">标签</a><a href="/links/">友情链</a><a href="/about/">关于</a></nav><div class="sidebar__social"><a href="https://github.com/ryxeroo" target="_blank" rel="noopener">GitHub</a><a href="mailto:2024728478@qq.com" target="_blank" rel="noopener">E-Mail</a></div></div></section></aside><div class="mobile-topbar"><button class="mobile-topbar__toggle js-drawer-toggle" type="button" aria-label="Open navigation"><span></span><span></span><span></span></button><a class="mobile-topbar__title" href="/">Ryxer</a><a class="mobile-topbar__avatar" href="/"><img src="/images/y.jpg" alt="Ryxer is here"></a></div><div class="mobile-drawer" data-drawer aria-hidden="true"><div class="mobile-drawer__panel"><section class="sidebar sidebar--mobile"><div class="sidebar__backdrop" style="background-image:url(/images/1.jpg)"></div><div class="sidebar__overlay"></div><div class="sidebar__content"><a class="sidebar__brand" href="/"><img class="sidebar__avatar" src="/images/y.jpg" alt="Ryxer is here"><div class="sidebar__identity"><h2 class="sidebar__title">Ryxer</h2><p class="sidebar__subtitle">闲邪存其诚</p></div></a><p class="sidebar__description">天行健，君子以自强不息</p><nav class="sidebar__nav" aria-label="Primary"><a href="/">首页</a><a href="/archives/">归档</a><a href="/categories/">分类</a><a href="/tags/">标签</a><a href="/links/">友情链</a><a href="/about/">关于</a></nav><div class="sidebar__social"><a href="https://github.com/ryxeroo" target="_blank" rel="noopener">GitHub</a><a href="mailto:2024728478@qq.com" target="_blank" rel="noopener">E-Mail</a></div></div></section></div></div><div class="mobile-backdrop js-drawer-close"></div><main class="site-main"><div class="article-layout article-layout--with-toc"><article class="article"><header class="article__header"><div class="article__eyebrow"><a href="/categories/%E9%9D%A2%E8%AF%95/">面试</a></div><h1 class="article__title">myself</h1><div class="article__meta"><time datetime="2026-06-05T08:31:36.000Z">2026-06-05</time><span class="article__divider">/</span><span>更新于 2026-06-22</span></div><div class="article__tags"><a class="article__tag" href="/tags/rem/">rem</a></div></header><details class="post-outline post-outline--mobile"><summary class="post-outline__summary"><span>本文导航</span><small>按标题快速定位</small></summary><nav class="post-toc" data-post-toc><ol class="post-toc__list"><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#1-sqlmap-%E6%80%8E%E4%B9%88%E6%8B%BFshell"><span class="post-toc__list-text">1. sqlmap 怎么拿shell</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#2-MySQL-%E9%80%9A%E8%BF%87%E6%B3%A8%E5%85%A5%E7%82%B9%E6%8F%90%E6%9D%83%E6%96%B9%E6%B3%95"><span class="post-toc__list-text">2. MySQL 通过注入点提权方法</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#3-MySQL-%E5%BB%B6%E6%97%B6%E6%B3%A8%E5%85%A5%E5%85%B3%E9%94%AE%E5%87%BD%E6%95%B0%EF%BC%8C%E5%85%A8%E8%A2%AB%E8%BF%87%E6%BB%A4%E6%80%8E%E4%B9%88%E5%8A%9E"><span class="post-toc__list-text">3. MySQL 延时注入关键函数，全被过滤怎么办</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#4-sqlmap-%E4%B8%AD-os-shell-%E6%89%A7%E8%A1%8C%E7%9A%84%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86"><span class="post-toc__list-text">4. sqlmap 中 --os-shell 执行的底层原理</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#5-%E6%98%AF%E5%90%A6%E4%BC%9A%E5%86%99%E8%84%9A%E6%9C%AC%EF%BC%8C%E9%83%BD%E5%9C%A8%E4%BB%80%E4%B9%88%E6%83%85%E5%86%B5%E4%B8%8B%E5%86%99%E4%BB%80%E4%B9%88%E6%A0%B7%E7%9A%84%E8%84%9A%E6%9C%AC"><span class="post-toc__list-text">5. 是否会写脚本，都在什么情况下写什么样的脚本</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#6-%E5%8F%AF%E7%96%91%E8%BF%9B%E7%A8%8B%E5%8D%A0%E7%94%A8-80-%E7%AB%AF%E5%8F%A3%EF%BC%8C%E6%9F%A5%E8%AF%A2%E6%B2%A1%E6%9C%89%E8%BF%9B%E7%A8%8B%E5%8F%B7%EF%BC%8C%E6%80%8E%E4%B9%88%E6%8E%92%E6%9F%A5"><span class="post-toc__list-text">6. 可疑进程占用 80 端口，查询没有进程号，怎么排查</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#7-%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0"><span class="post-toc__list-text">7. 文件上传</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#8-%E7%99%BD%E5%90%8D%E5%8D%95%E7%BB%95%E8%BF%87"><span class="post-toc__list-text">8. 白名单绕过</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#9-%E8%9A%81%E5%89%91%E3%80%81%E5%86%B0%E8%9D%8E%E3%80%81%E5%93%A5%E6%96%AF%E6%8B%89%E7%AD%89%E6%94%BB%E5%87%BB%E6%B5%81%E9%87%8F%E7%89%B9%E5%BE%81"><span class="post-toc__list-text">9. 蚁剑、冰蝎、哥斯拉等攻击流量特征</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#10-XSS-%E5%AD%98%E5%82%A8%E5%9E%8B%E6%8F%90%E6%9D%83%E6%96%B9%E6%B3%95"><span class="post-toc__list-text">10. XSS 存储型提权方法</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#11-SSRF"><span class="post-toc__list-text">11. SSRF</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#12-%E6%8B%BF%E5%88%B0%E4%B8%80%E4%B8%AA-web-%E9%A1%B5%E9%9D%A2%E4%BD%A0%E6%80%8E%E4%B9%88%E8%BF%9B%E8%A1%8C%E6%B8%97%E9%80%8F%EF%BC%9F"><span class="post-toc__list-text">12. 拿到一个 web 页面你怎么进行渗透？</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#13-%E9%AB%98%E5%8D%B1%E6%BC%8F%E6%B4%9E%E7%89%B9%E7%82%B9"><span class="post-toc__list-text">13. 高危漏洞特点</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#14-%E9%AB%98%E5%8D%B1%E3%80%81%E4%B8%AD%E5%8D%B1%E3%80%81%E4%BD%8E%E5%8D%B1%E6%BC%8F%E6%B4%9E%E8%AF%84%E5%88%86"><span class="post-toc__list-text">14. 高危、中危、低危漏洞评分</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#15-%E6%B8%97%E9%80%8F%E3%80%81%E5%BA%94%E6%80%A5%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%80%9D%E8%B7%AF%E4%BB%A5%E5%8F%8A%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%94%A8%E4%BB%80%E4%B9%88%E5%91%BD%E4%BB%A4"><span class="post-toc__list-text">15. 渗透、应急的基本思路以及过程中用什么命令</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#16-%E4%BD%A0%E5%9C%A8%E9%A1%B9%E7%9B%AE%E8%BF%87%E7%A8%8B%E4%B8%AD%E6%9C%89%E6%B2%A1%E6%9C%89%E9%81%87%E8%A7%81%E4%BB%80%E4%B9%88%E9%97%AE%E9%A2%98%EF%BC%8C%E4%BD%A0%E6%98%AF%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3%E7%9A%84"><span class="post-toc__list-text">16. 你在项目过程中有没有遇见什么问题，你是如何解决的</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#17-%E5%A6%82%E6%9E%9C%E4%BD%A0%E6%8C%96%E7%9A%84%E4%B8%AD%E5%8D%B1%E6%BC%8F%E6%B4%9E%E8%A2%AB%E9%99%8D%E7%BA%A7%EF%BC%8C%E5%A6%82%E4%BD%95%E8%AF%B4%E6%9C%8D%E5%AF%B9%E6%96%B9%EF%BC%9F"><span class="post-toc__list-text">17. 如果你挖的中危漏洞被降级，如何说服对方？</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#18-AWD-%E6%AF%94%E8%B5%9B%E6%97%B6%E9%98%9F%E5%8F%8B%E6%84%8F%E8%A7%81%E5%88%86%E6%AD%A7%EF%BC%8C%E4%BD%A0%E6%80%8E%E4%B9%88%E5%81%9A"><span class="post-toc__list-text">18. AWD 比赛时队友意见分歧，你怎么做</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#19-%E9%A2%86%E5%AF%BC%E8%AF%B4%E2%80%9C%E6%8B%BF%E5%88%B0%E6%88%91%E8%BA%AB%E4%BB%BD%E4%BF%A1%E6%81%AF%E5%8F%88%E8%83%BD%E6%80%8E%E6%A0%B7%EF%BC%9F%E2%80%9D%E4%BD%A0%E8%AF%A5%E5%A6%82%E4%BD%95%E5%BA%94%E5%AF%B9"><span class="post-toc__list-text">19. 领导说“拿到我身份信息又能怎样？”你该如何应对</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#20-%E4%BD%A0%E5%AF%B9%E7%9B%AE%E5%89%8D%E5%AE%89%E5%85%A8%E8%A1%8C%E4%B8%9A%E6%9C%89%E4%BB%80%E4%B9%88%E9%97%AE%E9%A2%98%EF%BC%9F%E6%80%8E%E4%B9%88%E6%94%B9%E8%BF%9B"><span class="post-toc__list-text">20. 你对目前安全行业有什么问题？怎么改进</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#21-%E7%BB%99%E4%BD%A0%E4%B8%80%E4%B8%AA%E5%85%AC%E5%8F%B8%E5%90%8D%E7%A7%B0%E4%BD%A0%E8%A6%81%E6%80%8E%E4%B9%88%E8%BF%9B%E8%A1%8C%E6%B8%97%E9%80%8F%EF%BC%9F"><span class="post-toc__list-text">21. 给你一个公司名称你要怎么进行渗透？</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#22-SQL%E6%B3%A8%E5%85%A5%E7%9A%84%E5%8E%9F%E7%90%86%E5%92%8C%E9%98%B2%E8%8C%83"><span class="post-toc__list-text">22. SQL注入的原理和防范</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#23-Linux%E7%99%BB%E5%BD%95%E6%88%90%E5%8A%9F%E7%9A%84%E6%97%A5%E5%BF%97%E5%AD%98%E6%94%BE%E7%9B%AE%E5%BD%95"><span class="post-toc__list-text">23. Linux登录成功的日志存放目录</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#24-Linux%E6%9F%A5%E7%9C%8B%E8%BF%9B%E7%A8%8B%E7%9A%84%E5%91%BD%E4%BB%A4%EF%BC%8C%E6%80%8E%E4%B9%88%E5%88%A4%E6%96%AD%E6%8E%92%E6%9F%A5%E6%81%B6%E6%84%8F%E8%BF%9B%E7%A8%8B%EF%BC%9F"><span class="post-toc__list-text">24. Linux查看进程的命令，怎么判断排查恶意进程？</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#25-Linux%E6%9F%A5%E7%9C%8B%E8%AE%A1%E5%88%92%E4%BB%BB%E5%8A%A1%E7%9A%84%E5%91%BD%E4%BB%A4"><span class="post-toc__list-text">25. Linux查看计划任务的命令</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#26-PHP%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E7%9A%84%E5%8E%9F%E5%9B%A0"><span class="post-toc__list-text">26. PHP反序列化的原因</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#27-%E7%9C%8B%E5%91%8A%E8%AD%A6%E6%80%8E%E4%B9%88%E5%88%A4%E6%96%ADWebshell%E4%B8%8A%E4%BC%A0%E6%98%AF%E5%90%A6%E6%88%90%E5%8A%9F%EF%BC%8C%E5%A6%82%E6%9E%9C%E5%88%A4%E6%96%AD%E5%87%BA%E6%9D%A5%E4%B8%8A%E4%BC%A0%E6%88%90%E5%8A%9F%E6%80%8E%E4%B9%88%E5%8E%BB%E5%A4%84%E7%90%86%EF%BC%9F"><span class="post-toc__list-text">27. 看告警怎么判断Webshell上传是否成功，如果判断出来上传成功怎么去处理？</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#28-Python%E7%88%AC%E8%99%AB%E5%B8%B8%E7%94%A8%E7%9A%84%E5%BA%93"><span class="post-toc__list-text">28. Python爬虫常用的库</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#29-%E6%8B%BF%E5%88%B0%E4%B8%80%E4%B8%AA%E7%99%BB%E5%BD%95%E6%A1%86%E9%99%A4%E4%BA%86%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3%E3%80%81%E4%B8%87%E8%83%BD%E5%AF%86%E7%A0%81%E8%BF%98%E8%83%BD%E5%81%9A%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="post-toc__list-text">29. 拿到一个登录框除了暴力破解、万能密码还能做什么？</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#30%E3%80%81%E9%AB%98%E5%8D%B1%E7%AB%AF%E5%8F%A3"><span class="post-toc__list-text">30、高危端口</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#31%E3%80%81Qzzty%E6%98%AF%E6%80%8E%E4%B9%88%E5%81%9A%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E7%9A%84%EF%BC%9F"><span class="post-toc__list-text">31、Qzzty是怎么做信息收集的？</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#32%E3%80%81Qzzty%E5%A6%82%E4%BD%95%E5%A4%84%E7%90%86%E5%AD%90%E5%9F%9F%E5%90%8D%E7%88%86%E7%A0%B4%E7%9A%84%E6%B3%9B%E8%A7%A3%E6%9E%90%E9%97%AE%E9%A2%98"><span class="post-toc__list-text">32、Qzzty如何处理子域名爆破的泛解析问题</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#33%E3%80%81Qzzty%E5%A6%82%E4%BD%95%E7%BB%95%E8%BF%87-CDN-%E6%9F%A5%E6%89%BE%E7%9C%9F%E5%AE%9E-IP"><span class="post-toc__list-text">33、Qzzty如何绕过 CDN 查找真实 IP</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#34%E3%80%81%E5%A6%82%E6%9E%9C%E7%BB%99Qzzty%E4%B8%80%E5%9C%BA%E6%94%BB%E9%98%B2%E6%BC%94%E7%BB%83%EF%BC%8CQzzty%E4%BC%9A%E6%80%8E%E4%B9%88%E6%89%93"><span class="post-toc__list-text">34、如果给Qzzty一场攻防演练，Qzzty会怎么打</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#35%E3%80%81Qzzty%E8%AE%B2%E8%AE%B2xss%E6%BC%8F%E6%B4%9E%E7%9A%84%E5%8E%9F%E7%90%86%EF%BC%8C%E5%88%A9%E7%94%A8%EF%BC%8C%E9%98%B2%E5%BE%A1%EF%BC%8C%E5%8F%8D%E5%B0%84%E5%9E%8B%EF%BC%8C%E5%AD%98%E5%82%A8%E5%9E%8B%EF%BC%8CDOM%E5%9E%8Bxss%E7%9A%84%E6%A0%B8%E5%BF%83%E5%8C%BA%E5%88%AB"><span class="post-toc__list-text">35、Qzzty讲讲xss漏洞的原理，利用，防御，反射型，存储型，DOM型xss的核心区别</span></a></li></ol></nav></details><div class="article__content"><h3 id="1-sqlmap-怎么拿shell"><a href="#1-sqlmap-怎么拿shell" class="headerlink" title="1. sqlmap 怎么拿shell"></a><strong>1. sqlmap 怎么拿shell</strong></h3><p>使用 <code>--os-shell</code>，前提是数据库有写文件权限、知道网站绝对路径，且 <code>secure_file_priv</code> 允许。sqlmap 会自动写入对应语言的 webshell（如 PHP&#x2F;ASP&#x2F;JSP），然后通过它执行命令。</p>
 <hr>
 <h3 id="2-MySQL-通过注入点提权方法"><a href="#2-MySQL-通过注入点提权方法" class="headerlink" title="2. MySQL 通过注入点提权方法"></a>2. MySQL 通过注入点提权方法</h3><ul>
 <li><strong>UDF 提权</strong>：将恶意动态库写入插件目录，创建自定义函数执行系统命令。</li>
@@ -349,7 +349,7 @@
 <h3 id="33、Qzzty如何绕过-CDN-查找真实-IP"><a href="#33、Qzzty如何绕过-CDN-查找真实-IP" class="headerlink" title="33、Qzzty如何绕过 CDN 查找真实 IP"></a>33、Qzzty如何绕过 CDN 查找真实 IP</h3><p> CDN 全称内容分发网络，简单讲就是一套遍布各地的边缘缓存服务器集群。它会提前把网站页面、图片、脚本等资源同步到就近节点，用户访问时不再直连网站源服务器，而是从附近节点获取内容，既能加快访问速度、减轻源站压力，还能隐藏服务器真实 IP、分流流量并抵御部分攻击，这也是需要专门方法才能绕过它找到源站 IP 的原因  </p>
 <p>（1）首先我会通过多地ping，全球ping来看是否返回了不同的ip地址，如果返回了很多ip，则目标开启了cdn。如果返回了很多ip，其中有一个ip出现的次数很多，可以猜测为真实ip。使用全球ping去判断，有些cdn会解析国内不同节点，但是不解析国外，通过全球Ping返回的ip地址，也可能是真实的ip地址。</p>
 <p>（2）通过子域名判断，有的主域名部署cdn，但是子域名没有cdn，这些子域名可能与主域名部署在同一个服务器上，或者在同一个 IP 段内。把大量的子域名进行一个ip的查询，多次返回稳定的结果，推测为真实ip。</p>
-<p>（3）邮件头信息<br>        ● 原理: 很多网站的邮件服务器（如 SMTP）与 Web 服务器部署在同一台机器上，而邮件服务器通常不使用 CDN<br>        ● 方法:<br>              ○ 尝试给目标网站的邮箱（如 <a href="mailto:&#x61;&#x64;&#x6d;&#105;&#110;&#x40;&#101;&#120;&#97;&#109;&#112;&#108;&#x65;&#46;&#x63;&#111;&#109;">&#x61;&#x64;&#x6d;&#105;&#110;&#x40;&#101;&#120;&#97;&#109;&#112;&#108;&#x65;&#46;&#x63;&#111;&#109;</a>）发送一封邮件<br>              ○ 在你的邮箱中查看这封邮件的原始邮件头（Original Headers）<br>             ○ 在邮件头中寻找 Received: from 字段。这个字段记录了邮件在传输过程中经过的服务器IP 地址。通常，第一个 Received: from 后面的 IP 地址就是邮件服务器的真实 IP，而这个 IP 很可能就是网站的真实 IP</p>
+<p>（3）邮件头信息<br>        ● 原理: 很多网站的邮件服务器（如 SMTP）与 Web 服务器部署在同一台机器上，而邮件服务器通常不使用 CDN<br>        ● 方法:<br>              ○ 尝试给目标网站的邮箱（如 <a href="mailto:&#x61;&#100;&#109;&#x69;&#110;&#x40;&#101;&#120;&#x61;&#109;&#x70;&#108;&#101;&#x2e;&#99;&#111;&#109;">&#x61;&#100;&#109;&#x69;&#110;&#x40;&#101;&#120;&#x61;&#109;&#x70;&#108;&#101;&#x2e;&#99;&#111;&#109;</a>）发送一封邮件<br>              ○ 在你的邮箱中查看这封邮件的原始邮件头（Original Headers）<br>             ○ 在邮件头中寻找 Received: from 字段。这个字段记录了邮件在传输过程中经过的服务器IP 地址。通常，第一个 Received: from 后面的 IP 地址就是邮件服务器的真实 IP，而这个 IP 很可能就是网站的真实 IP</p>
 <p>（4）历史 DNS 记录查询<br>        ● 原理: 一个网站在上线 CDN 之前，其 DNS A 记录直接指向的就是真实 IP。一些服务会保存这些历史记录<br>        ● 方法:<br>              ○ 使用在线服务（如 SecurityTrails、WhoisXML API 或 ViewDNS）查询域名的历史 DNS 解析记录<br>              ○ 通过这些历史记录，你可以找到在 CDN 启用之前网站使用的真实 IP 地址</p>
 <p>（5）SSL 证书查询<br>            ● 原理: SSL 证书可能会包含一些指向源站的信息，例如在某些情况下，证书颁发者会记录申请者的 IP 地址<br>            ● 方法:<br>                  ○ 通过在线服务（如 Censys、Shodan）对目标域名进行 SSL 证书查询<br>                  ○ 查看证书的 subjectAltName 字段，或者检查是否有其他关联信息泄露了真实 IP<br>                  ○ 在某些情况下，如果目标网站使用了与源站 IP 绑定的证书，可以在 Shodan 等搜索引擎中直接搜索证书哈希或序列号来定位真实 IP</p>
 <hr>
@@ -388,4 +388,205 @@
 </li>
 </ul>
 <hr>
+<h3 id="36、怎么看告警？如何判断误报"><a href="#36、怎么看告警？如何判断误报" class="headerlink" title="36、怎么看告警？如何判断误报"></a>36、怎么看告警？如何判断误报</h3><hr>
+<h3 id="37、如何进行应急响应？"><a href="#37、如何进行应急响应？" class="headerlink" title="37、如何进行应急响应？"></a>37、如何进行应急响应？</h3><p>遵循PDCERF模型：</p>
+<ul>
+<li><strong>准备</strong>：制定预案、工具集、人员分工、通信方式。</li>
+<li><strong>检测</strong>：确认事件性质、范围、影响系统，收集初步证据。</li>
+<li><strong>遏制</strong>：隔离受害主机（断网、封IP、下线服务），防止扩散。</li>
+<li><strong>根除</strong>：清除后门、恶意进程、补丁修复漏洞、改密码、重建系统。</li>
+<li><strong>恢复</strong>：将业务在确认安全后重新上线，实时监控。</li>
+<li><strong>跟踪</strong>：总结报告，复盘攻击路径，改进防护措施，输出事件报告。</li>
+</ul>
+<hr>
+<h3 id="38、给你一个web页面怎么进行渗透？"><a href="#38、给你一个web页面怎么进行渗透？" class="headerlink" title="38、给你一个web页面怎么进行渗透？"></a>38、给你一个web页面怎么进行渗透？</h3><ul>
+<li><strong>信息收集</strong>：域名whois、子域名、端口、CMS/框架指纹、WAF识别、目录/文件扫描、JS敏感信息、谷歌黑客。</li>
+<li><strong>漏洞探测</strong>：手动+漏扫，针对每个参数/功能点测试SQL注入、XSS、命令注入、文件上传、越权、CSRF、逻辑漏洞。</li>
+<li><strong>漏洞利用</strong>：获取初步权限（webshell、数据库访问、后台登录等）。</li>
+<li><strong>后渗透</strong>：提权、信息收集、横向移动（在授权范围内）。<br>全程记录步骤，生成报告。</li>
+</ul>
+<hr>
+<h3 id="39、ssrf怎么内网渗透怎么命令执行？"><a href="#39、ssrf怎么内网渗透怎么命令执行？" class="headerlink" title="39、ssrf怎么内网渗透怎么命令执行？"></a>39、ssrf怎么内网渗透怎么命令执行？</h3><p><strong>内网渗透：</strong></p>
+<ul>
+<li>利用SSRF的<code>file://</code>、<code>dict://</code>、<code>gopher://</code>等协议探测内网IP和端口。</li>
+<li>发现内网未授权服务（Redis、MySQL、FastCGI、Elasticsearch等），通过gopher协议构造请求包进行攻击。</li>
+<li>例如攻击Redis：用gopher发送<code>CONFIG SET dir</code>等命令写webshell或计划任务反弹shell。</li>
+</ul>
+<p><strong>命令执行：</strong></p>
+<ul>
+<li>攻击内网存在命令注入的服务：如利用gopher攻击Redis执行<code>CONFIG SET</code>配合dbfilename写shell来间接命令执行。</li>
+<li>若SSRF支持其他协议及CRLF注入，可在请求服务时注入命令（如Memcached、SMTP）。</li>
+<li>也可利用SSRF结合内网Web应用漏洞（如Struts2）实现命令执行。</li>
+</ul>
+<hr>
+<h3 id="40、php写的网站有个漏洞，但是它还设了个waf怎么绕过？如果过滤的是空格，怎么绕过？"><a href="#40、php写的网站有个漏洞，但是它还设了个waf怎么绕过？如果过滤的是空格，怎么绕过？" class="headerlink" title="40、php写的网站有个漏洞，但是它还设了个waf怎么绕过？如果过滤的是空格，怎么绕过？"></a>40、php写的网站有个漏洞，但是它还设了个waf怎么绕过？如果过滤的是空格，怎么绕过？</h3><p><strong>WAF绕过手法：</strong></p>
+<ul>
+<li>编码绕过：双重URL编码、Unicode编码、十六进制编码。</li>
+<li>大小写/注释混写：<code>SeLeCt</code>，<code>/*!50000select*/</code>。</li>
+<li>分块传输/协议层绕过：利用HTTP/1.1分块、参数污染(HPP)、混合边界。</li>
+<li>冷门函数/语法替代：使用<code>char()</code>拼接、<code>load_file</code>变体等。</li>
+<li>其他：更换提交方式（GET/POST/Cookie互换）、填充垃圾数据突破长度限制。</li>
+</ul>
+<p><strong>空格过滤绕过（SQL注入为例）：</strong></p>
+<ul>
+<li>用<code>/**/</code>注释符：<code>SELECT/**/1</code></li>
+<li>特殊空白字符：<code>%09</code>(tab), <code>%0a</code>(换行), <code>%0d</code>(回车), <code>%0b</code>, <code>%0c</code>, <code>%a0</code></li>
+<li>括号代替空格：<code>SELECT(user())</code></li>
+<li>反引号/浮点形式(特殊场景)：``id<code>=1</code></li>
+</ul>
+<p><strong>命令注入空格绕过：</strong></p>
+<ul>
+<li><code>$&#123;IFS&#125;</code>、<code>$IFS$9</code>、<code>&#123;cat,/etc/passwd&#125;</code>、<code>&lt;&gt;</code>重定向、<code>&lt;</code>输入重定向。</li>
+</ul>
+<hr>
+<h3 id="41、常见提权方式有哪些？数据库提权有没有了解过？"><a href="#41、常见提权方式有哪些？数据库提权有没有了解过？" class="headerlink" title="41、常见提权方式有哪些？数据库提权有没有了解过？"></a>41、常见提权方式有哪些？数据库提权有没有了解过？</h3><p><strong>常见提权：</strong></p>
+<ul>
+<li>系统漏洞提权（内核提权，如脏牛、Windows print spooler）。</li>
+<li>SUID/SGID文件提权。</li>
+<li>Sudo配置不当(NOPASSWD)提权。</li>
+<li>计划任务/启动项写入。</li>
+<li>弱密码/凭据窃取。</li>
+<li>Docker组用户提权。</li>
+<li>滥用Capabilities、PATH劫持。</li>
+</ul>
+<p><strong>数据库提权：</strong></p>
+<ul>
+<li><strong>MySQL UDF提权</strong>：上传udf.dll/so到插件目录，创建自定义函数执行系统命令（需file权限且插件目录可写）。</li>
+<li><strong>MOF提权</strong>（Windows，老方法）。</li>
+<li><strong>MSSQL</strong>：开启<code>xp_cmdshell</code>执行命令（需sa权限）。</li>
+<li><strong>Oracle</strong>：通过DBMS_SCHEDULER等执行系统命令。</li>
+</ul>
+<hr>
+<h3 id="42、接触过哪些安全设备？"><a href="#42、接触过哪些安全设备？" class="headerlink" title="42、接触过哪些安全设备？"></a>42、接触过哪些安全设备？</h3><p>防火墙(下一代)、WAF、IDS/IPS、抗DDoS设备、SIEM/日志审计、漏洞扫描器(Nessus/ AWVS/ 极光等)、堡垒机、终端EDR/AV、蜜罐、态势感知平台、数据库审计、准入控制、VPN等。</p>
+<hr>
+<h3 id="43、防火墙配置的优先级"><a href="#43、防火墙配置的优先级" class="headerlink" title="43、防火墙配置的优先级"></a>43、防火墙配置的优先级</h3><p>多数防火墙规则按<strong>从上到下顺序匹配</strong>，命中即停止。通常：</p>
+<ul>
+<li>越具体、精确的规则放上方。</li>
+<li>Deny规则一般优先于Allow（具体要看产品逻辑，部分允许细粒度控制）。</li>
+<li>管理员会把紧急封禁、高优先级策略置顶。</li>
+<li>默认规则(隐式拒绝)在最后。<br>建议：梳理策略，避免宽泛规则提前命中导致细粒度规则失效。</li>
+</ul>
+<hr>
+<h3 id="44、正向代理和反向代理"><a href="#44、正向代理和反向代理" class="headerlink" title="44、正向代理和反向代理"></a>44、正向代理和反向代理</h3><p><strong>正向代理</strong>：代理客户端，客户端知道目标服务器，通过代理去访问，隐藏客户端身份，可用于突破访问限制（如翻墙）。<br><strong>反向代理</strong>：代理服务端，客户端访问代理后由代理转发至后端真实服务器，隐藏服务端真实IP，实现负载均衡、缓存、SSL卸载。<br>典型：Nginx做反向代理，VPN/Proxy为正向。</p>
+<hr>
+<h3 id="45、js逆向有了解吗？"><a href="#45、js逆向有了解吗？" class="headerlink" title="45、js逆向有了解吗？"></a>45、js逆向有了解吗？</h3><p>分析前端JavaScript混淆/加密代码，恢复原始逻辑或提取加密算法。常用：浏览器断点调试、调用栈追踪、改写/ Hook关键函数、AST抽象语法树处理、RPC远程调用执行JS、补浏览器环境。用于参数破解、登录加密分析等，在爬虫与渗透中常用。</p>
+<hr>
+<h3 id="46、小程序抓包用什么工具？"><a href="#46、小程序抓包用什么工具？" class="headerlink" title="46、小程序抓包用什么工具？"></a>46、小程序抓包用什么工具？</h3><hr>
+<h3 id="47、bp中抓到一个包之后用bp的什么功能抓它的返回包？"><a href="#47、bp中抓到一个包之后用bp的什么功能抓它的返回包？" class="headerlink" title="47、bp中抓到一个包之后用bp的什么功能抓它的返回包？"></a>47、bp中抓到一个包之后用bp的什么功能抓它的返回包？</h3><p>在Proxy的<code>Options</code>中，勾选<code>Intercept responses based on...</code>规则（或直接启动拦截并设置拦截服务器响应）。也可对Intercept is on 后点击界面上“Intercept is on”切换响应拦截。 实践中常将请求发送到<code>Repeater</code>重放，直接获取返回包进行观察修改。</p>
+<hr>
+<h3 id="48、文件上传黑白名单绕过"><a href="#48、文件上传黑白名单绕过" class="headerlink" title="48、文件上传黑白名单绕过"></a>48、文件上传黑白名单绕过</h3><p><strong>黑名单绕过</strong>：</p>
+<ul>
+<li>大小写：<code>.Php</code></li>
+<li>双写：<code>.pphphp</code></li>
+<li>空格与点：<code>.php.</code>，<code>.php</code>（Windows自动去除）</li>
+<li>流特性：<code>::$DATA</code></li>
+<li>可解析后缀：<code>phtml, pht, php3, php5</code></li>
+<li>上传<code>.htaccess</code>覆盖解析（AddType）</li>
+<li>图片马+文件包含</li>
+<li>条件竞争上传</li>
+</ul>
+<p><strong>白名单绕过</strong>：</p>
+<ul>
+<li>%00截断（需低版本PHP且magic_quotes_gpc=off）</li>
+<li>利用解析漏洞（如IIS 6.0 <code>1.asp;.jpg</code>）</li>
+<li>结合文件包含</li>
+<li>修改Content-Type伪装+上传图片马利用包含漏洞</li>
+<li>攻击中间件或系统特性</li>
+</ul>
+<hr>
+<h3 id="49、sql注入分类"><a href="#49、sql注入分类" class="headerlink" title="49、sql注入分类"></a>49、sql注入分类</h3><ul>
+<li>按参数类型：数字型、字符型、搜索型。</li>
+<li>按请求方式：GET注入、POST注入、Cookie/Header注入。</li>
+<li>按攻击方法：联合查询注入、报错注入、布尔盲注、时间盲注、堆叠注入、DNS外带注入、二次注入、宽字节注入。</li>
+</ul>
+<hr>
+<h3 id="50、sql注入报错函数"><a href="#50、sql注入报错函数" class="headerlink" title="50、sql注入报错函数"></a>50、sql注入报错函数</h3><p>常用MySQL报错函数：</p>
+<ul>
+<li><code>updatexml(1, concat(0x7e, (select database())), 1)</code></li>
+<li><code>extractvalue(1, concat(0x7e, user()))</code></li>
+<li><code>floor(rand(0)*2)</code> 配合 group by 造成重复键报错。<br>其他数据库：MSSQL用 <code>convert(int, @@version)</code> 产生转换错误。PostgreSQL用<code>cast</code>等。</li>
+</ul>
+<hr>
+<h3 id="51、解释xss漏洞原理，xss漏洞一般怎么用"><a href="#51、解释xss漏洞原理，xss漏洞一般怎么用" class="headerlink" title="51、解释xss漏洞原理，xss漏洞一般怎么用"></a>51、解释xss漏洞原理，xss漏洞一般怎么用</h3><p><strong>原理</strong>：Web应用对用户输入未做充分过滤，将恶意脚本输出到页面中，导致浏览器解析执行攻击者脚本。</p>
+<p><strong>分类</strong>：反射型、存储型、DOM型。<br><strong>利用</strong>：</p>
+<ul>
+<li>窃取Cookie/session劫持；</li>
+<li>配合CSRF执行敏感操作；</li>
+<li>钓鱼伪装登录框；</li>
+<li>探测内网；</li>
+<li>利用BeEF进行持续控制；</li>
+<li>蠕虫传播。</li>
+</ul>
+<hr>
+<h3 id="52、web页面信息收集"><a href="#52、web页面信息收集" class="headerlink" title="52、web页面信息收集"></a>52、web页面信息收集</h3><ul>
+<li>whois、DNS、CDN识别、历史解析。</li>
+<li>子域名爆破、端口扫描、旁站C段。</li>
+<li>CMS/框架/语言识别，网站指纹（WhatWeb,Wappalyzer）。</li>
+<li>目录/文件扫描（后台、备份文件、git/SVN泄露）。</li>
+<li>搜索引擎hacking（site:,inurl:等）。</li>
+<li>JS文件敏感信息（API、密钥、注释中的IP）。</li>
+<li>HTTP头信息（Server,X-Powered-By）、错误页面信息。</li>
+<li>公开信息（GitHub、网盘）。</li>
+</ul>
+<hr>
+<h3 id="53、做攻防演练怎么进行信息收集？怎么渗透？"><a href="#53、做攻防演练怎么进行信息收集？怎么渗透？" class="headerlink" title="53、做攻防演练怎么进行信息收集？怎么渗透？"></a>53、做攻防演练怎么进行信息收集？怎么渗透？</h3><p><strong>信息收集</strong>：</p>
+<ul>
+<li>被动：企业信息、天眼查/企查查、人员邮箱、域名、网段、GitHub敏感信息、Shodan/Fofa资产。</li>
+<li>主动：子域名爆破、端口扫描、指纹识别、目录扫描、漏洞扫描器。</li>
+</ul>
+<p><strong>渗透</strong>：</p>
+<ul>
+<li>外部打点：弱口令、未授权、1day/nday漏洞利用、钓鱼。</li>
+<li>突破边界获取据点，建立隧道路由。</li>
+<li>内网信息收集：存活主机、域控定位、敏感文件、凭据获取。</li>
+<li>横向移动：哈希传递(PTH)、票据攻击、远程执行、共享。</li>
+<li>持久化与目标达成，规避检测，清理痕迹。</li>
+</ul>
+<hr>
+<h3 id="54、网络七层模型？"><a href="#54、网络七层模型？" class="headerlink" title="54、网络七层模型？"></a>54、网络七层模型？</h3><p>OSI七层：</p>
+<ul>
+<li><strong>物理层</strong>：比特流传输。</li>
+<li><strong>数据链路层</strong>：帧，MAC地址，差错校验。</li>
+<li><strong>网络层</strong>：包，IP，路由选择。</li>
+<li><strong>传输层</strong>：段，TCP/UDP，端到端可靠传输。</li>
+<li><strong>会话层</strong>：建立、管理、终止会话。</li>
+<li><strong>表示层</strong>：数据格式转换、加解密。</li>
+<li><strong>应用层</strong>：应用程序网络服务接口（HTTP、FTP等）。</li>
+</ul>
+<hr>
+<h3 id="55、如果漏洞报告交上去客户反应有问题该怎么办？"><a href="#55、如果漏洞报告交上去客户反应有问题该怎么办？" class="headerlink" title="55、如果漏洞报告交上去客户反应有问题该怎么办？"></a>55、如果漏洞报告交上去客户反应有问题该怎么办？</h3><ul>
+<li>耐心沟通，明确客户具体疑点（无法复现、认为误报、危害分歧、修复建议不清晰）。</li>
+<li>提供完整复现视频/截图、POC、环境详情。</li>
+<li>对于声称误报需重新验证，若确为自己分析有误则修正报告。</li>
+<li>环境差异导致的，可协商远程协助测试或提供更精确条件。</li>
+<li>对危害评级分歧，引用标准（CVSS）解释。</li>
+<li>闭环处理，更新报告版本直到客户认可。</li>
+</ul>
+<hr>
+<h3 id="56、给你一个web静态登录页面你会做什么测试？"><a href="#56、给你一个web静态登录页面你会做什么测试？" class="headerlink" title="56、给你一个web静态登录页面你会做什么测试？"></a>56、给你一个web静态登录页面你会做什么测试？</h3><ul>
+<li>账号枚举、弱口令爆破。</li>
+<li>验证码机制绕过（重放、识别、空值）。</li>
+<li>密码找回/重置功能逻辑漏洞。</li>
+<li>SQL注入（登录框）、XSS。</li>
+<li>框架/组件已知漏洞。</li>
+<li>查看页面源码/JS，找测试账号、注释、接口。</li>
+<li>HTTP响应头安全加固检查。</li>
+<li>目录/隐藏接口扫描（注册、后台等）。</li>
+<li>会话固定、缺少CSRF保护、越权测试（登录后）。</li>
+</ul>
+<hr>
+<h3 id="57、sql注入的原理与防范"><a href="#57、sql注入的原理与防范" class="headerlink" title="57、sql注入的原理与防范"></a>57、sql注入的原理与防范</h3><p><strong>原理</strong>：程序在构造SQL语句时直接拼接外部输入，导致攻击者可改变SQL语义执行恶意操作。<br><strong>防范</strong>：</p>
+<ul>
+<li>使用参数化查询（Prepared Statement），强制分离代码与数据。</li>
+<li>严格输入校验，白名单控制。</li>
+<li>最小权限数据库账号。</li>
+<li>关闭错误回显。</li>
+<li>部署WAF。</li>
+<li>使用ORM正确绑定参数，避免拼接。</li>
+</ul>
+<hr>
+<h3 id="58、ssrf和csrf的区别"><a href="#58、ssrf和csrf的区别" class="headerlink" title="58、ssrf和csrf的区别"></a>58、ssrf和csrf的区别</h3><ul>
+<li><strong>SSRF</strong>（服务端请求伪造）：由<strong>服务器</strong>发起请求，攻击者让服务器访问内网资源或外网恶意地址，漏洞点在服务端。</li>
+<li><strong>CSRF</strong>（跨站请求伪造）：攻击者诱导<strong>用户浏览器</strong>以用户身份发送恶意请求至存在CSRF漏洞的Web应用，执行非预期操作，漏洞点在Web应用对请求来源校验不足。<br>区别：攻击发起者不同（服务端 vs 浏览器），攻击目标不同（内网资源探测 vs 以用户身份执行动作）。两者原理和影响领域差异较大。</li>
+</ul>
 </div></article><aside class="post-outline post-outline--desktop" aria-label="文章目录"><p class="post-outline__eyebrow">本文导航</p><p class="post-outline__title">章节概览</p><nav class="post-toc" data-post-toc></nav></aside></div><nav class="post-nav"><a class="post-nav__item post-nav__item--prev" href="/2026/06/07/%E7%BD%91%E5%AE%89/"><span class="post-nav__label">上一篇</span><strong>网安</strong></a><a class="post-nav__item post-nav__item--next" href="/2026/06/05/hw/"><span class="post-nav__label">下一篇</span><strong>hw</strong></a></nav></main><footer class="site-footer"><p class="site-footer__text">Ryxer</p><p class="site-footer__license">本站内容采用<a href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh-hans" target="_blank" rel="noopener"> CC BY-NC 4.0 </a>协议发布</p></footer></div></body></html>
