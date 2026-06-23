@@ -1,0 +1,156 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#496b8c"><meta name="description" content="Ryxer"><meta name="author" content="Ryxer is here"><meta name="generator" content="Hexo 7.3.0"><title>判断web页面/接口 | Ryxer</title><style>:root {
+  --accent: #496b8c;
+  --accent-strong: color-mix(in srgb, #496b8c 62%, #223142);
+  --accent-soft: #dce8f0;
+}</style><link rel="stylesheet" href="/css/hsad-theme.css"><script src="/js/hsad-theme.js" defer></script></head><body class="view-inner view-post"><div class="reading-progress" aria-hidden="true"><span class="reading-progress__bar" data-reading-progress></span></div><div class="page-aura page-aura--one"></div><div class="page-aura page-aura--two"></div><div class="site-shell"><aside class="site-sidebar"><section class="sidebar sidebar--desktop"><div class="sidebar__backdrop" style="background-image:url(/images/1.jpg)"></div><div class="sidebar__overlay"></div><div class="sidebar__content"><a class="sidebar__brand" href="/"><img class="sidebar__avatar" src="/images/y.jpg" alt="Ryxer is here"><div class="sidebar__identity"><h2 class="sidebar__title">Ryxer</h2><p class="sidebar__subtitle">闲邪存其诚</p></div></a><p class="sidebar__description">天行健，君子以自强不息</p><nav class="sidebar__nav" aria-label="Primary"><a href="/">首页</a><a href="/archives/">归档</a><a href="/categories/">分类</a><a href="/tags/">标签</a><a href="/links/">友情链</a><a href="/about/">关于</a></nav><div class="sidebar__social"><a href="https://github.com/ryxeroo" target="_blank" rel="noopener">GitHub</a><a href="mailto:2024728478@qq.com" target="_blank" rel="noopener">E-Mail</a></div></div></section></aside><div class="mobile-topbar"><button class="mobile-topbar__toggle js-drawer-toggle" type="button" aria-label="Open navigation"><span></span><span></span><span></span></button><a class="mobile-topbar__title" href="/">Ryxer</a><a class="mobile-topbar__avatar" href="/"><img src="/images/y.jpg" alt="Ryxer is here"></a></div><div class="mobile-drawer" data-drawer aria-hidden="true"><div class="mobile-drawer__panel"><section class="sidebar sidebar--mobile"><div class="sidebar__backdrop" style="background-image:url(/images/1.jpg)"></div><div class="sidebar__overlay"></div><div class="sidebar__content"><a class="sidebar__brand" href="/"><img class="sidebar__avatar" src="/images/y.jpg" alt="Ryxer is here"><div class="sidebar__identity"><h2 class="sidebar__title">Ryxer</h2><p class="sidebar__subtitle">闲邪存其诚</p></div></a><p class="sidebar__description">天行健，君子以自强不息</p><nav class="sidebar__nav" aria-label="Primary"><a href="/">首页</a><a href="/archives/">归档</a><a href="/categories/">分类</a><a href="/tags/">标签</a><a href="/links/">友情链</a><a href="/about/">关于</a></nav><div class="sidebar__social"><a href="https://github.com/ryxeroo" target="_blank" rel="noopener">GitHub</a><a href="mailto:2024728478@qq.com" target="_blank" rel="noopener">E-Mail</a></div></div></section></div></div><div class="mobile-backdrop js-drawer-close"></div><main class="site-main"><div class="article-layout article-layout--with-toc"><article class="article"><header class="article__header"><div class="article__eyebrow"><a href="/categories/%E5%AE%9E%E4%B9%A0/">实习</a></div><h1 class="article__title">判断web页面/接口</h1><div class="article__meta"><time datetime="2026-06-23T03:12:26.000Z">2026-06-23</time><span class="article__divider">/</span><span>更新于 2026-06-23</span></div><div class="article__tags"><a class="article__tag" href="/tags/%E5%B0%8F%E7%9F%A5%E8%AF%86/">小知识</a></div></header><details class="post-outline post-outline--mobile"><summary class="post-outline__summary"><span>本文导航</span><small>按标题快速定位</small></summary><nav class="post-toc" data-post-toc><ol class="post-toc__list"><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#%E4%B8%80%E3%80%81%E5%88%A4%E6%96%AD%E4%B8%80%E4%B8%AA%E9%A1%B5%E9%9D%A2%E6%98%AF%E2%80%9CWeb%E9%A1%B5%E9%9D%A2%E2%80%9D%E8%BF%98%E6%98%AF%E2%80%9CAPI%E6%8E%A5%E5%8F%A3%E2%80%9D%EF%BC%8C"><span class="post-toc__list-text">一、判断一个页面是“Web页面”还是“API接口”，</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#%E4%BA%8C%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AF%E6%8E%A5%E5%8F%A3"><span class="post-toc__list-text">二、什么是接口</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#%E4%B8%89%E3%80%81%E5%89%8D%E5%90%8E%E7%AB%AF%E6%98%AF%E6%80%8E%E4%B9%88%E9%80%9A%E8%BF%87%E6%8E%A5%E5%8F%A3%E8%81%94%E8%B0%83%E7%9A%84"><span class="post-toc__list-text">三、前后端是怎么通过接口联调的</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#%E5%9B%9B%E3%80%81%E8%B7%A8%E5%9F%9F%EF%BC%88CORS%EF%BC%89%E6%98%AF%E4%BB%80%E4%B9%88"><span class="post-toc__list-text">四、跨域（CORS）是什么</span></a></li></ol></nav></details><div class="article__content"><p>判断一个页面是“Web页面”还是“API接口”，最核心的区别在于：<strong>它是给人“看”的，还是给机器“读”的</strong>。</p>
+<h3 id="一、判断一个页面是“Web页面”还是“API接口”，"><a href="#一、判断一个页面是“Web页面”还是“API接口”，" class="headerlink" title="一、判断一个页面是“Web页面”还是“API接口”，"></a>一、判断一个页面是“Web页面”还是“API接口”，</h3><p>最核心的区别在于：<strong>它是给人“看”的，还是给机器“读”的</strong>。</p>
+<p><strong>1. 肉眼直接看（最直观）</strong></p>
+<ul>
+<li><strong>Web页面</strong>：返回的是图文并茂的界面，包含文字、按钮、图片、表格、导航栏，需要滚动浏览。</li>
+<li><strong>API接口</strong>：返回的通常是纯文本、一串乱码般的JSON数据（<code>&#123; &quot;code&quot;:200, &quot;data&quot;:... &#125;</code>）、XML格式，或者干脆是空白页面加一行报错信息。<strong>没有</strong>任何CSS样式或图片装饰。</li>
+</ul>
+<p><strong>2. 查看浏览器地址栏（看URL后缀）</strong></p>
+<ul>
+<li><strong>Web页面</strong>：URL通常以 <code>.html</code>、<code>.htm</code>、<code>.php</code>、<code>.asp</code> 结尾，或者干脆是纯路径（如 <code>/home</code>、<code>/products/123</code>），且不带奇怪的参数。</li>
+<li><strong>API接口</strong>：URL常包含明显的标识词，如 <code>/api/</code>、<code>/v1/</code>、<code>/rest/</code>、<code>/graphql</code>，或者后缀是 <code>.json</code>、<code>.xml</code>。例如 <code>https://xxx.com/api/getUser?id=1</code>。</li>
+</ul>
+<p><strong>3. 按 F12 打开开发者工具（最准确）</strong></p>
+<p>这是程序员最常用的方法：</p>
+<ul>
+<li>按 <code>F12</code> 或右键点击“检查”，切换到 <strong>“网络（Network）”</strong> 标签页，刷新当前页面。</li>
+<li>看当前页面的第一条请求记录（通常是第一个文件）：<ul>
+<li>如果 <strong>类型（Type）</strong> 是 <code>document</code>（文档），且 <strong>响应头（Headers）</strong> 中的 <code>Content-Type</code> 是 <code>text/html</code>，说明是 <strong>Web页面</strong>。</li>
+<li>如果 <strong>类型</strong> 是 <code>fetch</code>、<code>xhr</code>，或者 <code>Content-Type</code> 是 <code>application/json</code>、<code>text/plain</code>，说明是 <strong>API接口</strong>。</li>
+</ul>
+</li>
+</ul>
+<p><strong>4. 复制链接到新窗口打开（排除干扰）</strong></p>
+<p>如果当前页面看起来像数据，但带有样式（可能是调试工具），你可以直接复制当前页面的完整URL，打开一个<strong>无痕&#x2F;隐私浏览窗口</strong>粘贴访问：</p>
+<ul>
+<li>如果看到漂亮的界面 → <strong>Web页面</strong>。</li>
+<li>如果打开后直接显示一堆大括号&#x2F;方括号的数据 → <strong>API接口</strong>。</li>
+</ul>
+<p><strong>5. 看“页面”是否能交互（点击测试）</strong></p>
+<ul>
+<li><strong>Web页面</strong>：点击链接会跳转、按钮有点击反馈、表单可以输入文字。</li>
+<li><strong>API接口</strong>：页面上没有任何可点击的按钮（除非是Swagger&#x2F;Postman风格的API文档工具），点击空白处无任何反应，通常只能看到只读的文本数据。</li>
+</ul>
+<p><strong>一个特例需要注意</strong>：<br>如果你看到一个<strong>排版美观、带侧边栏、有“Try it out”按钮</strong>的页面，里面展示着JSON数据，这其实是<strong>API调试文档</strong>（如Swagger UI、Redoc）。它本身是“Web页面”，但它的<strong>核心用途</strong>是描述和测试“API接口”。你可以按上面的“维度3”查看Network类型来最终确认（它加载的是 <code>text/html</code> 文档）。</p>
+<hr>
+<h3 id="二、什么是接口"><a href="#二、什么是接口" class="headerlink" title="二、什么是接口"></a>二、什么是接口</h3><h4 id="1-核心比喻：接口就是“服务员”"><a href="#1-核心比喻：接口就是“服务员”" class="headerlink" title="1. 核心比喻：接口就是“服务员”"></a>1. 核心比喻：接口就是“服务员”</h4><p>想象你去一家高级餐厅吃饭：</p>
+<ul>
+<li><strong>你（客户端）</strong>：想要吃饭，但不会做菜。</li>
+<li><strong>后厨（服务器&#x2F;数据库）</strong>：有所有食材和厨艺，能做菜，但不能直接出来跟你说话。</li>
+<li><strong>Web页面（前端界面）</strong>：就是餐厅的<strong>菜单</strong>和<strong>餐具</strong>，是给你看的、用来操作的东西。</li>
+<li><strong>接口（API）</strong>：就是那个<strong>传菜的服务员</strong>。</li>
+</ul>
+<p><strong>接口的作用就是“传话”</strong>：你告诉服务员“我要一份宫保鸡丁”（发送请求），服务员把单子递给后厨，后厨做好菜后，服务员再把菜端到你面前（返回数据）。<strong>整个过程，你不需要知道后厨用的是铁锅还是砂锅，也不需要亲自去拿食材——服务员（接口）帮你搞定了所有沟通。</strong></p>
+<h4 id="2-接口到底长什么样？（技术视角）"><a href="#2-接口到底长什么样？（技术视角）" class="headerlink" title="2. 接口到底长什么样？（技术视角）"></a>2. 接口到底长什么样？（技术视角）</h4><p>在技术上，接口就是<strong>一套约定好的“暗号”</strong>，通常由以下四部分组成：</p>
+<ol>
+<li><strong>地址（URL）</strong>：就像餐厅的“传菜窗口”位置，比如 <code>https://api.xxx.com/order</code>。</li>
+<li><strong>方法（Method）</strong>：告诉你要干什么事。主要有四种：<ul>
+<li><strong>GET</strong>（点菜）：只查看数据，不修改数据。</li>
+<li><strong>POST</strong>（下单）：提交新数据（比如注册账号、提交订单）。</li>
+<li><strong>PUT&#x2F;PATCH</strong>（修改）：更新现有数据（比如修改昵称）。</li>
+<li><strong>DELETE</strong>（退菜）：删除数据。</li>
+</ul>
+</li>
+<li><strong>参数（Params&#x2F;Body）</strong>：你具体要什么东西。比如 <code>&#123;&quot;dish&quot;: &quot;宫保鸡丁&quot;, &quot;spicy&quot;: &quot;微辣&quot;&#125;</code>。</li>
+<li><strong>返回结果（Response）</strong>：后厨给你的结果。通常是 JSON 格式的文本，比如 <code>&#123;&quot;code&quot;: 200, &quot;data&quot;: &#123;&quot;status&quot;: &quot;已做好的菜&quot;&#125;, &quot;msg&quot;: &quot;成功&quot;&#125;</code>。</li>
+</ol>
+<h4 id="3-接口的三大核心特性（记住这三点）"><a href="#3-接口的三大核心特性（记住这三点）" class="headerlink" title="3. 接口的三大核心特性（记住这三点）"></a>3. 接口的三大核心特性（记住这三点）</h4><ul>
+<li><strong>看不见（无界面）</strong>：接口没有按钮、没有颜色、没有排版，它就是后台的一串数据流。所以你刚才问“怎么判断页面还是接口”，就是因为接口<strong>没有界面</strong>可看。</li>
+<li><strong>标准统一</strong>：不管你是苹果手机、安卓手机，还是电脑网页，只要按照这套“暗号”去请求，拿到的数据都是一模一样的。</li>
+<li><strong>只传数据，不负责显示</strong>：接口只把“数据”（比如用户姓名、价格、列表）扔给你，至于这些数据在屏幕上是大字体还是小字体、是红色还是蓝色，那是“Web页面”负责排版的事。</li>
+</ul>
+<h4 id="4-你生活中每天都在用接口"><a href="#4-你生活中每天都在用接口" class="headerlink" title="4. 你生活中每天都在用接口"></a>4. 你生活中每天都在用接口</h4><ul>
+<li><strong>查天气</strong>：你打开天气App，App调用天气接口（<code>GET /weather?city=香港</code>），接口返回 <code>&#123;&quot;temp&quot;:28, &quot;rain&quot;: false&#125;</code>，App再把“28°C”画成太阳图标给你看。</li>
+<li><strong>微信支付扫二维码</strong>：你扫码这个动作，是向微信支付接口发送了“扣款请求”，接口返回“扣款成功”或“余额不足”，页面上才弹出弹窗提醒你。</li>
+</ul>
+<h4 id="5-顺便帮你理清一个常有的误解"><a href="#5-顺便帮你理清一个常有的误解" class="headerlink" title="5. 顺便帮你理清一个常有的误解"></a>5. 顺便帮你理清一个常有的误解</h4><p>很多人以为“Swagger”或者“Postman”那种界面就是接口，其实<strong>那不是接口本身</strong>，那叫<strong>接口文档&#x2F;调试工具</strong>——相当于服务员手里的“点菜平板”，只是用来帮你快捷填写“暗号”的工具，真正的接口运转在后厨（服务器）里。</p>
+<p>所以</p>
+<ul>
+<li><strong>Web页面</strong> &#x3D; 你手中的<strong>菜单</strong>（给人看样式）。</li>
+<li><strong>API接口</strong> &#x3D; 那个<strong>传菜的服务员</strong>（给机器传数据）。</li>
+</ul>
+<hr>
+<h3 id="三、前后端是怎么通过接口联调的"><a href="#三、前后端是怎么通过接口联调的" class="headerlink" title="三、前后端是怎么通过接口联调的"></a>三、前后端是怎么通过接口联调的</h3><p>前后端联调就像是<strong>服务员（前端）和厨师（后端）配合着把一道菜完美端给顾客</strong>的过程。</p>
+<p>但在现实中，前端和后端往往是<strong>同时开工</strong>的。如果非要等厨师把菜全做完，服务员再开始写菜单，项目周期就太长了。所以，联调本质上是一场<strong>“按图纸对接”</strong>的协作游戏。</p>
+<p>我用四个阶段，把前后端联调的全过程给你拆解透：</p>
+<h4 id="第一阶段：定“菜谱”（约定接口文档）"><a href="#第一阶段：定“菜谱”（约定接口文档）" class="headerlink" title="第一阶段：定“菜谱”（约定接口文档）"></a>第一阶段：定“菜谱”（约定接口文档）</h4><p>在开工前，前后端会坐在一起（或者用Swagger&#x2F;YApi等工具），把所有的“暗号”提前定死。这份文档就是<strong>契约</strong>，包含：</p>
+<ul>
+<li>接口地址（URL）：比如 <code>/getUserInfo</code>。</li>
+<li>请求方式（GET&#x2F;POST）。</li>
+<li>需要传什么参数（叫 <code>userId</code> 还是 <code>uid</code>？是数字还是字符串？）。</li>
+<li>会返回什么数据（返回的JSON里，用户名是叫 <code>name</code> 还是 <code>userName</code>？）。</li>
+</ul>
+<blockquote>
+<p><strong>现实中的坑</strong>：如果文档里写返回 <code>userName</code>，后端写代码时写成了 <code>username</code>，前端页面就会显示“undefined”（未定义）。<strong>联调最常见的 Bug，就是没按“菜谱”放调料。</strong></p>
+</blockquote>
+<h4 id="第二阶段：各自“练手”（并行开发）"><a href="#第二阶段：各自“练手”（并行开发）" class="headerlink" title="第二阶段：各自“练手”（并行开发）"></a>第二阶段：各自“练手”（并行开发）</h4><p>有了“菜谱”，两边就可以互不干扰地同时干活了：</p>
+<ul>
+<li><strong>后端（厨师）</strong>：按照文档，在服务器上写代码，提供真实的接口数据。</li>
+<li><strong>前端（服务员）</strong>：<strong>绝对不等着后端！</strong> 前端会使用“Mock（模拟）工具”，自己造一份和文档格式一模一样的假数据。页面直接调用这份假数据，把按钮样式、排版动画全部做好。</li>
+</ul>
+<p>这时候，前端页面看起来是跑通的，但数据全是假的——这叫<strong>“前后端分离开发”</strong>。</p>
+<h4 id="第三阶段：正式“对菜”（环境连接）"><a href="#第三阶段：正式“对菜”（环境连接）" class="headerlink" title="第三阶段：正式“对菜”（环境连接）"></a>第三阶段：正式“对菜”（环境连接）</h4><p>当两边都觉得自己写好了，就进入最核心的<strong>联调</strong>阶段：</p>
+<ol>
+<li><strong>前端切换“靶子”</strong>：前端把代码里的接口地址，从“本地假数据地址”一键切换成“后端真实服务器的地址（如 <code>http://192.168.1.xxx:8080</code>）”。</li>
+<li><strong>发起“实弹请求”</strong>：前端点击页面上的“登录”按钮，请求真实发送到了后端服务器。</li>
+<li><strong>后端接收并响应</strong>：后端收到请求，去数据库查数据，把结果（JSON格式）返回给前端。</li>
+<li><strong>前端渲染</strong>：前端拿到真实数据，刷新页面。</li>
+</ol>
+<p>如果页面显示正常，代表这条路<strong>“通”了</strong>；如果页面报错或乱码，就进入激烈的“调试阶段”。</p>
+<h4 id="第四阶段：拿着“工具”找-Bug（调试与排查）"><a href="#第四阶段：拿着“工具”找-Bug（调试与排查）" class="headerlink" title="第四阶段：拿着“工具”找 Bug（调试与排查）"></a>第四阶段：拿着“工具”找 Bug（调试与排查）</h4><p>联调通常不是一次过的，出问题时会用到下面这些“破案工具”：</p>
+<ul>
+<li><strong>前端查看网络请求（F12 -&gt; 网络（Network））</strong>：前端按F12，看请求有没有发出去？返回的HTTP状态码是什么？<ul>
+<li>如果是 <strong>404</strong>：说明地址写错了（走错厨房了）。</li>
+<li>如果是 <strong>500</strong>：说明后端代码崩了（厨师锅烧糊了）。</li>
+<li>如果是 <strong>400</strong>：说明参数传错了（把“微辣”写成了“巨辣”）。</li>
+</ul>
+</li>
+<li><strong>后端查看日志（Log）</strong>：后端看服务器控制台，看前端传过来的参数到底是什么。如果发现没收到参数，就是前端没传对；如果收到参数但查不到数据，就是数据库问题。</li>
+<li><strong>使用接口调试工具（Postman&#x2F;Apifox）</strong>：为了判断到底是谁的错，后端会把接口地址复制到Postman里自己调一下。<strong>如果Postman里数据正常，但前端页面报错——那就是前端解析的代码写错了；如果Postman里也报错——那就是后端的锅，赶紧去改。</strong></li>
+</ul>
+<h4 id="一个联调时的真实“撕逼”场景（帮你避坑）"><a href="#一个联调时的真实“撕逼”场景（帮你避坑）" class="headerlink" title="一个联调时的真实“撕逼”场景（帮你避坑）"></a>一个联调时的真实“撕逼”场景（帮你避坑）</h4><p>前端（指着屏幕）：“后端大哥，我这边报错了，用户信息没出来。”<br>后端（查日志）：“我明明返回了数据啊，你看 <code>&#123;&quot;data&quot;:&quot;null&quot;&#125;</code>。”<br>前端：“你文档说返回 <code>null</code>，但我代码里是按 <code>[]</code>（空数组）写的循环，你让我怎么显示？！”<br>（解决方案：按文档严格对齐，或者后端改成 <code>[]</code>，前端改成判空处理）</p>
+<h4 id="最终阶段：提测与上线"><a href="#最终阶段：提测与上线" class="headerlink" title="最终阶段：提测与上线"></a>最终阶段：提测与上线</h4><p>所有接口都走通后，前后端会一起把代码合并，部署到<strong>测试环境</strong>给测试人员测。测试通过后，再一起部署到<strong>线上生产环境</strong>，正式对外服务。</p>
+<p>最后送你一句老程序员的“保命心法”：</p>
+<blockquote>
+<p><strong>联调之前，打死不认是自己的Bug；联调之后，打开抓包工具（F12），看数据包到底长啥样——数据包不会说谎，它是唯一的法官。</strong></p>
+</blockquote>
+<hr>
+<h3 id="四、跨域（CORS）是什么"><a href="#四、跨域（CORS）是什么" class="headerlink" title="四、跨域（CORS）是什么"></a>四、跨域（CORS）是什么</h3><p>跨域（CORS）堪称前后端联调时的“<strong>头号拦路虎</strong>”。联调时页面报错，十有八九就是它搞的鬼。</p>
+<p>接住我们之前“餐厅”的比喻，<strong>跨域就是“保安查工作证”</strong>。我带你三分钟彻底吃透它。</p>
+<h4 id="1-到底什么是“跨域”？（保安拦人）"><a href="#1-到底什么是“跨域”？（保安拦人）" class="headerlink" title="1. 到底什么是“跨域”？（保安拦人）"></a>1. 到底什么是“跨域”？（保安拦人）</h4><p>浏览器（保安）有一个极其严格的安全规则——<strong>同源策略</strong>。<br>“同源”指的是三个完全一样：<strong>协议</strong>（http&#x2F;https）、<strong>域名</strong>（<a target="_blank" rel="noopener" href="https://xxx.com/">xxx.com</a>）、<strong>端口号</strong>（:8080）。</p>
+<p><strong>现实场景：</strong><br>你的前端页面跑在 <code>http://localhost:3000</code>（你在A餐厅当服务员），但你要调用的后端接口在 <code>http://api.xxx.com:8080</code>（B餐厅后厨）。</p>
+<ul>
+<li>浏览器保安一看：“不对啊，你的工牌是A店的，凭什么去B店后厨端菜？<strong>拦住！</strong>”</li>
+<li>于是，浏览器直接报错（控制台红字）：<code>Access-Control-Allow-Origin</code> 错误。<strong>注意：请求其实发出去了，后端也处理了，只是浏览器扣住了返回的数据，不交给前端代码。</strong></li>
+</ul>
+<blockquote>
+<p><strong>一个关键认知</strong>：跨域报错，<strong>是浏览器的锅，不是后端的锅，更不是前端的锅</strong>。后端接口用Postman调是好的，一放浏览器就报错——就是因为Postman没保安管。</p>
+</blockquote>
+<h4 id="2-跨域是怎么“打架”的？（简单请求-vs-预检）"><a href="#2-跨域是怎么“打架”的？（简单请求-vs-预检）" class="headerlink" title="2. 跨域是怎么“打架”的？（简单请求 vs 预检）"></a>2. 跨域是怎么“打架”的？（简单请求 vs 预检）</h4><p>为了安全，浏览器会把请求分两类，采取不同策略：</p>
+<ul>
+<li><strong>简单请求（如 GET 查数据）</strong>：浏览器直接发请求，如果后端没在返回头里写“允许A店进入”，浏览器就直接把数据丢进垃圾桶，前端拿不到。</li>
+<li><strong>复杂请求（如 PUT 修改数据，或带自定义头）</strong>：浏览器更谨慎，正式请求前，先发一个 <strong>“预检请求（OPTIONS）”</strong>。这就好比保安先拦着你问：“喂，B店后厨，A店服务员想进来端菜，你允许吗？”只有B店后厨回复“允许（Access-Control-Allow-Origin）”，浏览器才放行正式的请求。</li>
+</ul>
+<h4 id="3-怎么解决跨域？（三种硬核方案）"><a href="#3-怎么解决跨域？（三种硬核方案）" class="headerlink" title="3. 怎么解决跨域？（三种硬核方案）"></a>3. 怎么解决跨域？（三种硬核方案）</h4><p>既然拦路虎是浏览器，我们就要给它看“通行证”。</p>
+<h5 id="方案一：后端加“白名单”（最正统、最推荐）"><a href="#方案一：后端加“白名单”（最正统、最推荐）" class="headerlink" title="方案一：后端加“白名单”（最正统、最推荐）"></a>方案一：后端加“白名单”（最正统、最推荐）</h5><p>这是最终的线上解决方案。后端开发在代码里添加一个响应头（Response Header），明确告诉浏览器：“虽然前端是外来的，但我信任它，允许它拿数据。”</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Access-Control-Allow-Origin: https://localhost:3000  // 只允许这一个域名</span><br><span class="line">// 或者</span><br><span class="line">Access-Control-Allow-Origin: *  // 星号代表允许所有来源（开发测试常用）</span><br></pre></td></tr></table></figure>
+
+<p>如果遇到复杂请求，后端还得加上 <code>Access-Control-Allow-Methods</code>（允许的方法）和 <code>Access-Control-Allow-Headers</code>（允许的头信息）。</p>
+<h5 id="方案二：前端“走后门”代理（联调神器，无需后端改代码）"><a href="#方案二：前端“走后门”代理（联调神器，无需后端改代码）" class="headerlink" title="方案二：前端“走后门”代理（联调神器，无需后端改代码）"></a>方案二：前端“走后门”代理（联调神器，无需后端改代码）</h5><p>在前后端联调开发阶段，前端可以用自己的服务器<strong>当个“二传手”</strong>。</p>
+<ul>
+<li>原理：<strong>服务器和服务器之间通信，不存在跨域限制</strong>（只有浏览器有保安）。</li>
+<li>操作（以Vue&#x2F;React为例）：在配置文件中设置 <code>proxy</code>（代理）。前端请求先发给自己的前端服务器（比如 <code>localhost:3000</code>），前端服务器再把请求转发给后端服务器（<code>api.xxx.com</code>），拿到数据后丢给浏览器。</li>
+<li>因为浏览器最终访问的是 <code>localhost:3000</code>（同源），保安就不管了。</li>
+</ul>
+<h5 id="方案三：JSONP（古董方案，仅限-GET）"><a href="#方案三：JSONP（古董方案，仅限-GET）" class="headerlink" title="方案三：JSONP（古董方案，仅限 GET）"></a>方案三：JSONP（古董方案，仅限 GET）</h5><p>利用 <code>&lt;script&gt;</code> 标签不受跨域限制的漏洞来加载数据。但<strong>只能发 GET 请求</strong>，且不安全，现在极少使用，除非你在维护10年前的老项目。</p>
+<h4 id="4-联调时的“终极裁判”操作"><a href="#4-联调时的“终极裁判”操作" class="headerlink" title="4. 联调时的“终极裁判”操作"></a>4. 联调时的“终极裁判”操作</h4><p>如果在联调时遇到跨域报错，作为前端，你可以按 <code>F12</code> -&gt; <strong>网络（Network）</strong>，看两条记录：</p>
+<ol>
+<li>先看 <strong>OPTIONS</strong> 请求（如果有的话）：如果它返回状态码是 <strong>404</strong> 或 <strong>500</strong>，说明后端根本没给预检请求写路由，直接让后端加上。</li>
+<li>再看真正的请求（GET&#x2F;POST）：如果它状态码是 <strong>200</strong>，但控制台依然报跨域，说明<strong>后端没加 <code>Access-Control-Allow-Origin</code> 响应头</strong>。这时候直接把截图甩给后端：“大哥，请你响应头里给我开一下白名单。”</li>
+</ol>
+<p><strong>一句话总结</strong>：<br>跨域就是<strong>浏览器怕你被钓鱼</strong>，强行搞的安检。<strong>上线了就让后端开白名单，开发调试就用前端代理（Proxy）</strong>。只要记住“浏览器拦、服务器解”这六个字，以后联调遇到它，你就能冷静地找对责任人。</p>
+</div></article><aside class="post-outline post-outline--desktop" aria-label="文章目录"><p class="post-outline__eyebrow">本文导航</p><p class="post-outline__title">章节概览</p><nav class="post-toc" data-post-toc></nav></aside></div><nav class="post-nav"><a class="post-nav__item post-nav__item--next" href="/2026/06/22/fw-waf/"><span class="post-nav__label">下一篇</span><strong>fw/waf</strong></a></nav></main><footer class="site-footer"><p class="site-footer__text">Ryxer</p><p class="site-footer__license">本站内容采用<a href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh-hans" target="_blank" rel="noopener"> CC BY-NC 4.0 </a>协议发布</p></footer></div></body></html>
