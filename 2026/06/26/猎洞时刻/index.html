@@ -54,7 +54,7 @@
 </ul>
 <p>Ⅰ、大部分的初始密码都是身份证后六位， 通过一些方式简单溯源获得一个人的个人基础信息；</p>
 <p>Ⅱ、直接“忘记密码”，有的密保很简单可以猜一下；有的是密码修改时存在逻辑漏洞 ；</p>
-<h5 id="②全国学校名单"><a href="#②全国学校名单" class="headerlink" title="②全国学校名单"></a>②全国学校名单</h5><p><a target="_blank" rel="noopener" href="https://so.moe.gov.cn/%E6%90%9C%E2%80%9C**%E5%85%A8%E5%9B%BD%E9%AB%98%E7%AD%89%E5%AD%A6%E6%A0%A1%E5%90%8D%E5%8D%95**%E2%80%9D">https://so.moe.gov.cn/搜“**全国高等学校名单**”</a></p>
+<h5 id="②全国学校名单"><a href="#②全国学校名单" class="headerlink" title="②全国学校名单"></a>②全国学校名单</h5><p><a target="_blank" rel="noopener" href="https://so.moe.gov.cn/">https://so.moe.gov.cn</a> 搜“<strong>全国高等学校名单</strong>”</p>
 <p><img src="/images/%E5%AD%A6%E6%A0%A1%E5%90%8D%E5%8D%95.png" alt="学校名单"></p>
 <h2 id="二、开局一个登录口该如何渗透"><a href="#二、开局一个登录口该如何渗透" class="headerlink" title="二、开局一个登录口该如何渗透"></a>二、开局一个登录口该如何渗透</h2><h3 id="1、弱口令"><a href="#1、弱口令" class="headerlink" title="1、弱口令"></a>1、弱口令</h3><p>打登录口首先要考虑的是弱口令，再考虑其它的；</p>
 <ul>
@@ -70,7 +70,7 @@
 </ul>
 <h3 id="4、万能密码（SQL注入）"><a href="#4、万能密码（SQL注入）" class="headerlink" title="4、万能密码（SQL注入）"></a>4、万能密码（SQL注入）</h3><ul>
 <li>总结：<strong>当一个计算false&#x3D;false的时候，其整体值为true</strong>（eg:xxxx’ or ‘1’&#x3D;’1）；</li>
-<li>测试：先输入几个单引号（‘’‘’）看<strong>有没有sql报错</strong>，如果有就可以去尝试是否存在万能密码、注入等漏洞；</li>
+<li>测试：先输入几个单引号（’’’’）看<strong>有没有sql报错</strong>，如果有就可以去尝试是否存在万能密码、注入等漏洞；</li>
 <li>在搜索的时候，字段是非整形，当参数为0且只要一个限定条件时，会导致爆表。</li>
 </ul>
 <h3 id="5、SQL注入"><a href="#5、SQL注入" class="headerlink" title="5、SQL注入"></a>5、SQL注入</h3><ul>
