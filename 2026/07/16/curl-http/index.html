@@ -1,0 +1,375 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#496b8c"><meta name="description" content="Ryxer"><meta name="author" content="Ryxer is here"><meta name="generator" content="Hexo 7.3.0"><title>curl_http | Ryxer</title><style>:root {
+  --accent: #496b8c;
+  --accent-strong: color-mix(in srgb, #496b8c 62%, #223142);
+  --accent-soft: #dce8f0;
+}</style><link rel="stylesheet" href="/css/hsad-theme.css"><script src="/js/hsad-theme.js" defer></script></head><body class="view-inner view-post"><div class="reading-progress" aria-hidden="true"><span class="reading-progress__bar" data-reading-progress></span></div><div class="page-aura page-aura--one"></div><div class="page-aura page-aura--two"></div><div class="site-shell"><aside class="site-sidebar"><section class="sidebar sidebar--desktop"><div class="sidebar__backdrop" style="background-image:url(/images/1.jpg)"></div><div class="sidebar__overlay"></div><div class="sidebar__content"><a class="sidebar__brand" href="/"><img class="sidebar__avatar" src="/images/y.jpg" alt="Ryxer is here"><div class="sidebar__identity"><h2 class="sidebar__title">Ryxer</h2><p class="sidebar__subtitle">闲邪存其诚</p></div></a><p class="sidebar__description">天行健，君子以自强不息</p><nav class="sidebar__nav" aria-label="Primary"><a href="/">首页</a><a href="/archives/">归档</a><a href="/categories/">分类</a><a href="/tags/">标签</a><a href="/links/">友情链</a><a href="/about/">关于</a></nav><div class="sidebar__social"><a href="https://github.com/ryxeroo" target="_blank" rel="noopener">GitHub</a><a href="mailto:2024728478@qq.com" target="_blank" rel="noopener">E-Mail</a></div></div></section></aside><div class="mobile-topbar"><button class="mobile-topbar__toggle js-drawer-toggle" type="button" aria-label="Open navigation"><span></span><span></span><span></span></button><a class="mobile-topbar__title" href="/">Ryxer</a><a class="mobile-topbar__avatar" href="/"><img src="/images/y.jpg" alt="Ryxer is here"></a></div><div class="mobile-drawer" data-drawer aria-hidden="true"><div class="mobile-drawer__panel"><section class="sidebar sidebar--mobile"><div class="sidebar__backdrop" style="background-image:url(/images/1.jpg)"></div><div class="sidebar__overlay"></div><div class="sidebar__content"><a class="sidebar__brand" href="/"><img class="sidebar__avatar" src="/images/y.jpg" alt="Ryxer is here"><div class="sidebar__identity"><h2 class="sidebar__title">Ryxer</h2><p class="sidebar__subtitle">闲邪存其诚</p></div></a><p class="sidebar__description">天行健，君子以自强不息</p><nav class="sidebar__nav" aria-label="Primary"><a href="/">首页</a><a href="/archives/">归档</a><a href="/categories/">分类</a><a href="/tags/">标签</a><a href="/links/">友情链</a><a href="/about/">关于</a></nav><div class="sidebar__social"><a href="https://github.com/ryxeroo" target="_blank" rel="noopener">GitHub</a><a href="mailto:2024728478@qq.com" target="_blank" rel="noopener">E-Mail</a></div></div></section></div></div><div class="mobile-backdrop js-drawer-close"></div><main class="site-main"><div class="article-layout article-layout--with-toc"><article class="article"><header class="article__header"><div class="article__eyebrow"><a href="/categories/%E5%B0%8F%E7%9F%A5%E8%AF%86/">小知识</a></div><h1 class="article__title">curl_http</h1><div class="article__meta"><time datetime="2026-07-16T01:18:56.000Z">2026-07-16</time><span class="article__divider">/</span><span>更新于 2026-07-16</span></div><div class="article__tags"><a class="article__tag" href="/tags/%E5%AE%9E%E4%B9%A0/">实习</a></div></header><details class="post-outline post-outline--mobile"><summary class="post-outline__summary"><span>本文导航</span><small>按标题快速定位</small></summary><nav class="post-toc" data-post-toc><ol class="post-toc__list"><li class="post-toc__list-item post-toc__list-level-2"><a class="post-toc__list-link" href="#1-%E8%AF%B7%E6%B1%82%E6%96%B9%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%8F%91%E9%80%81"><span class="post-toc__list-text">1. 请求方法与数据发送</span></a></li><li class="post-toc__list-item post-toc__list-level-2"><a class="post-toc__list-link" href="#2-%E8%AF%B7%E6%B1%82%E5%A4%B4%E4%B8%8E%E8%AE%A4%E8%AF%81"><span class="post-toc__list-text">2. 请求头与认证</span></a></li><li class="post-toc__list-item post-toc__list-level-2"><a class="post-toc__list-link" href="#3-%E8%BE%93%E5%87%BA%E4%B8%8E%E9%87%8D%E5%AE%9A%E5%90%91"><span class="post-toc__list-text">3. 输出与重定向</span></a></li><li class="post-toc__list-item post-toc__list-level-2"><a class="post-toc__list-link" href="#4-%E8%B0%83%E8%AF%95%E4%B8%8E%E4%BF%A1%E6%81%AF"><span class="post-toc__list-text">4. 调试与信息</span></a></li><li class="post-toc__list-item post-toc__list-level-2"><a class="post-toc__list-link" href="#5-SSL-TLS-%E4%B8%8E%E8%BF%9E%E6%8E%A5%E9%80%89%E9%A1%B9"><span class="post-toc__list-text">5. SSL&#x2F;TLS 与连接选项</span></a></li><li class="post-toc__list-item post-toc__list-level-2"><a class="post-toc__list-link" href="#6-%E4%BB%A3%E7%90%86%E4%B8%8E%E9%99%90%E9%80%9F"><span class="post-toc__list-text">6. 代理与限速</span></a></li><li class="post-toc__list-item post-toc__list-level-2"><a class="post-toc__list-link" href="#7-%E7%BB%BC%E5%90%88%E7%A4%BA%E4%BE%8B"><span class="post-toc__list-text">7. 综合示例</span></a><ol class="post-toc__list-child"><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#7-1-%E5%8F%91%E9%80%81-JSON-%E6%95%B0%E6%8D%AE%EF%BC%88POST%EF%BC%89"><span class="post-toc__list-text">7.1 发送 JSON 数据（POST）</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#7-2-%E8%A1%A8%E5%8D%95%E6%8F%90%E4%BA%A4-%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0"><span class="post-toc__list-text">7.2 表单提交 + 文件上传</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#7-3-%E4%BD%BF%E7%94%A8-Bearer-Token-%E8%AE%A4%E8%AF%81%E7%9A%84-GET-%E8%AF%B7%E6%B1%82"><span class="post-toc__list-text">7.3 使用 Bearer Token 认证的 GET 请求</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#7-4-%E8%B7%9F%E9%9A%8F%E9%87%8D%E5%AE%9A%E5%90%91%E5%B9%B6%E4%BF%9D%E5%AD%98-Cookie"><span class="post-toc__list-text">7.4 跟随重定向并保存 Cookie</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#7-5-%E4%B8%8B%E8%BD%BD%E6%96%87%E4%BB%B6%E5%B9%B6%E6%98%BE%E7%A4%BA%E8%BF%9B%E5%BA%A6"><span class="post-toc__list-text">7.5 下载文件并显示进度</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#7-6-%E8%B0%83%E8%AF%95-API-%E8%B0%83%E7%94%A8%EF%BC%88%E8%AF%A6%E7%BB%86%E8%BE%93%E5%87%BA-%E8%BE%93%E5%87%BA%E5%93%8D%E5%BA%94%E5%A4%B4%EF%BC%89"><span class="post-toc__list-text">7.6 调试 API 调用（详细输出 + 输出响应头）</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#7-7-%E9%80%9A%E8%BF%87%E4%BB%A3%E7%90%86%E8%AE%BF%E9%97%AE-HTTPS-%E7%AB%99%E7%82%B9%EF%BC%88%E8%B7%B3%E8%BF%87%E8%AF%81%E4%B9%A6%E9%AA%8C%E8%AF%81%EF%BC%89"><span class="post-toc__list-text">7.7 通过代理访问 HTTPS 站点（跳过证书验证）</span></a></li><li class="post-toc__list-item post-toc__list-level-3"><a class="post-toc__list-link" href="#7-8-%E9%99%90%E5%88%B6%E9%80%9F%E7%8E%87%E4%B8%8B%E8%BD%BD"><span class="post-toc__list-text">7.8 限制速率下载</span></a></li></ol></li><li class="post-toc__list-item post-toc__list-level-2"><a class="post-toc__list-link" href="#8-%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5%E4%B8%8E%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="post-toc__list-text">8. 最佳实践与注意事项</span></a></li><li class="post-toc__list-item post-toc__list-level-2"><a class="post-toc__list-link" href="#%F0%9F%93%96-%E5%BB%B6%E4%BC%B8%E9%98%85%E8%AF%BB"><span class="post-toc__list-text">📖 延伸阅读</span></a></li></ol></nav></details><div class="article__content"><h1 id="curl-发送-HTTP-请求参数完全指南"><a href="#curl-发送-HTTP-请求参数完全指南" class="headerlink" title="curl 发送 HTTP 请求参数完全指南"></a>curl 发送 HTTP 请求参数完全指南</h1><p><code>curl</code> 是一个功能强大的命令行工具，支持超过 <strong>200</strong> 种选项。本文档聚焦于发送 HTTP&#x2F;HTTPS 请求时最常用、最核心的参数，并按照功能分类，辅以丰富的示例，帮助你快速查阅和运用。</p>
+<hr>
+<h2 id="1-请求方法与数据发送"><a href="#1-请求方法与数据发送" class="headerlink" title="1. 请求方法与数据发送"></a>1. 请求方法与数据发送</h2><table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">说明</th>
+<th align="left">示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>-X, --request &lt;method&gt;</code></td>
+<td align="left">指定 HTTP 方法（默认 GET）</td>
+<td align="left"><code>-X POST</code></td>
+</tr>
+<tr>
+<td align="left"><code>-d, --data &lt;data&gt;</code></td>
+<td align="left">发送数据到请求体（自动转为 POST）</td>
+<td align="left"><code>-d &quot;name=John&amp;age=30&quot;</code></td>
+</tr>
+<tr>
+<td align="left"><code>--data-ascii &lt;data&gt;</code></td>
+<td align="left">以 ASCII 编码发送数据</td>
+<td align="left">同上</td>
+</tr>
+<tr>
+<td align="left"><code>--data-binary &lt;data&gt;</code></td>
+<td align="left">发送二进制数据（保留原样）</td>
+<td align="left"><code>--data-binary @file.bin</code></td>
+</tr>
+<tr>
+<td align="left"><code>--data-raw &lt;data&gt;</code></td>
+<td align="left">发送数据，不解析 <code>@</code> 字符（适用于以 <code>@</code> 开头的字符串）</td>
+<td align="left"><code>--data-raw &quot;@rawstring&quot;</code></td>
+</tr>
+<tr>
+<td align="left"><code>--data-urlencode &lt;data&gt;</code></td>
+<td align="left">对数据进行 URL 编码后再发送</td>
+<td align="left"><code>--data-urlencode &quot;name=John Doe&quot;</code></td>
+</tr>
+<tr>
+<td align="left"><code>-F, --form &lt;name=content&gt;</code></td>
+<td align="left">模拟 <code>multipart/form-data</code> 表单提交，支持文件上传（<code>@</code> 前缀）</td>
+<td align="left"><code>-F &quot;file=@/path/to/file&quot;</code></td>
+</tr>
+<tr>
+<td align="left"><code>-G, --get</code></td>
+<td align="left">将 <code>-d</code> 的数据附加到 URL 查询字符串（用于 GET）</td>
+<td align="left"><code>-G -d &quot;key=value&quot;</code></td>
+</tr>
+<tr>
+<td align="left"><code>-I, --head</code></td>
+<td align="left">仅获取响应头（HEAD 请求）</td>
+<td align="left"><code>-I https://example.com</code></td>
+</tr>
+<tr>
+<td align="left"><code>-T, --upload-file &lt;file&gt;</code></td>
+<td align="left">通过 PUT 方法上传文件</td>
+<td align="left"><code>-T localfile https://example.com/upload</code></td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>注意</strong>：使用 <code>-d</code> 时未指定 <code>-X</code>，curl 默认发送 POST 请求。若同时使用 <code>-G</code>，则变为 GET。</p>
+</blockquote>
+<hr>
+<h2 id="2-请求头与认证"><a href="#2-请求头与认证" class="headerlink" title="2. 请求头与认证"></a>2. 请求头与认证</h2><table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">说明</th>
+<th align="left">示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>-H, --header &lt;header&gt;</code></td>
+<td align="left">自定义请求头（可多次使用）</td>
+<td align="left"><code>-H &quot;Content-Type: application/json&quot;</code></td>
+</tr>
+<tr>
+<td align="left"><code>-A, --user-agent &lt;name&gt;</code></td>
+<td align="left">设置 <code>User-Agent</code></td>
+<td align="left"><code>-A &quot;Mozilla/5.0&quot;</code></td>
+</tr>
+<tr>
+<td align="left"><code>-e, --referer &lt;URL&gt;</code></td>
+<td align="left">设置 <code>Referer</code></td>
+<td align="left"><code>-e &quot;https://example.com&quot;</code></td>
+</tr>
+<tr>
+<td align="left">&#96;-b, –cookie &lt;data</td>
+<td align="left">file&gt;&#96;</td>
+<td align="left">发送 Cookie（字符串或文件）</td>
+</tr>
+<tr>
+<td align="left"><code>-c, --cookie-jar &lt;file&gt;</code></td>
+<td align="left">将响应中的 Cookie 保存到文件</td>
+<td align="left"><code>-c cookies.txt</code></td>
+</tr>
+<tr>
+<td align="left"><code>-u, --user &lt;user:password&gt;</code></td>
+<td align="left">HTTP 基本认证</td>
+<td align="left"><code>-u admin:secret</code></td>
+</tr>
+<tr>
+<td align="left"><code>-H &quot;Authorization: ...&quot;</code></td>
+<td align="left">手动设置 Bearer Token 等</td>
+<td align="left"><code>-H &quot;Authorization: Bearer TOKEN&quot;</code></td>
+</tr>
+<tr>
+<td align="left"><code>--anyauth</code></td>
+<td align="left">自动协商服务器支持的认证方法</td>
+<td align="left">与 <code>-u</code> 搭配使用</td>
+</tr>
+<tr>
+<td align="left"><code>--digest</code></td>
+<td align="left">使用 HTTP 摘要认证（Digest）</td>
+<td align="left"><code>--digest -u user:pass</code></td>
+</tr>
+<tr>
+<td align="left"><code>--ntlm</code></td>
+<td align="left">使用 NTLM 认证</td>
+<td align="left"><code>--ntlm -u user:pass</code></td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="3-输出与重定向"><a href="#3-输出与重定向" class="headerlink" title="3. 输出与重定向"></a>3. 输出与重定向</h2><table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">说明</th>
+<th align="left">示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>-o, --output &lt;file&gt;</code></td>
+<td align="left">将响应内容保存到指定文件</td>
+<td align="left"><code>-o response.json</code></td>
+</tr>
+<tr>
+<td align="left"><code>-O, --remote-name</code></td>
+<td align="left">从 URL 中提取文件名并保存</td>
+<td align="left"><code>-O https://example.com/file.zip</code></td>
+</tr>
+<tr>
+<td align="left"><code>-L, --location</code></td>
+<td align="left">跟随 HTTP 重定向（默认不跟随）</td>
+<td align="left"><code>-L https://short.url</code></td>
+</tr>
+<tr>
+<td align="left"><code>--max-redirs &lt;num&gt;</code></td>
+<td align="left">限制最大重定向次数（配合 <code>-L</code>）</td>
+<td align="left"><code>--max-redirs 5</code></td>
+</tr>
+<tr>
+<td align="left"><code>-D, --dump-header &lt;file&gt;</code></td>
+<td align="left">将响应头保存到文件</td>
+<td align="left"><code>-D headers.txt</code></td>
+</tr>
+<tr>
+<td align="left"><code>--resolve &lt;host:port:ip&gt;</code></td>
+<td align="left">手动指定域名解析（绕过 DNS）</td>
+<td align="left"><code>--resolve example.com:443:127.0.0.1</code></td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="4-调试与信息"><a href="#4-调试与信息" class="headerlink" title="4. 调试与信息"></a>4. 调试与信息</h2><table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">说明</th>
+<th align="left">示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>-v, --verbose</code></td>
+<td align="left">输出详细通信过程（请求&#x2F;响应头、握手信息）</td>
+<td align="left"><code>-v https://api.example.com</code></td>
+</tr>
+<tr>
+<td align="left"><code>-s, --silent</code></td>
+<td align="left">静默模式（不显示进度条和错误信息）</td>
+<td align="left"><code>-s https://example.com</code></td>
+</tr>
+<tr>
+<td align="left"><code>-S, --show-error</code></td>
+<td align="left">与 <code>-s</code> 搭配，仅显示错误信息</td>
+<td align="left"><code>-sS https://example.com</code></td>
+</tr>
+<tr>
+<td align="left"><code>-i, --include</code></td>
+<td align="left">在输出中包含响应头（正文之前）</td>
+<td align="left"><code>-i https://example.com</code></td>
+</tr>
+<tr>
+<td align="left"><code>--compressed</code></td>
+<td align="left">请求压缩（如 gzip），并自动解压响应</td>
+<td align="left"><code>--compressed https://example.com</code></td>
+</tr>
+<tr>
+<td align="left"><code>-w, --write-out &lt;format&gt;</code></td>
+<td align="left">定义输出格式，常用 <code>%&#123;http_code&#125;</code> 等</td>
+<td align="left"><code>-w &quot;HTTP %&#123;http_code&#125;\n&quot;</code></td>
+</tr>
+<tr>
+<td align="left"><code>--trace &lt;file&gt;</code></td>
+<td align="left">将完整的跟踪日志写入文件（更详细）</td>
+<td align="left"><code>--trace trace.log</code></td>
+</tr>
+<tr>
+<td align="left"><code>--trace-ascii &lt;file&gt;</code></td>
+<td align="left">与 <code>--trace</code> 类似，但输出为 ASCII</td>
+<td align="left"><code>--trace-ascii trace.txt</code></td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="5-SSL-TLS-与连接选项"><a href="#5-SSL-TLS-与连接选项" class="headerlink" title="5. SSL&#x2F;TLS 与连接选项"></a>5. SSL&#x2F;TLS 与连接选项</h2><table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">说明</th>
+<th align="left">示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>-k, --insecure</code></td>
+<td align="left">跳过 SSL 证书验证（⚠️ 仅测试环境）</td>
+<td align="left"><code>-k https://self-signed.badssl.com</code></td>
+</tr>
+<tr>
+<td align="left"><code>--cert &lt;file&gt;</code></td>
+<td align="left">指定客户端证书文件（PEM 格式）</td>
+<td align="left"><code>--cert client.pem</code></td>
+</tr>
+<tr>
+<td align="left"><code>--cert-type &lt;type&gt;</code></td>
+<td align="left">证书类型（PEM&#x2F;DER&#x2F;P12）</td>
+<td align="left"><code>--cert-type PEM</code></td>
+</tr>
+<tr>
+<td align="left"><code>--key &lt;file&gt;</code></td>
+<td align="left">指定私钥文件</td>
+<td align="left"><code>--key key.pem</code></td>
+</tr>
+<tr>
+<td align="left"><code>--key-type &lt;type&gt;</code></td>
+<td align="left">私钥类型（PEM&#x2F;DER）</td>
+<td align="left"><code>--key-type PEM</code></td>
+</tr>
+<tr>
+<td align="left"><code>--pass &lt;phrase&gt;</code></td>
+<td align="left">私钥密码</td>
+<td align="left"><code>--pass &quot;mypass&quot;</code></td>
+</tr>
+<tr>
+<td align="left"><code>--cacert &lt;file&gt;</code></td>
+<td align="left">指定 CA 证书文件进行验证</td>
+<td align="left"><code>--cacert ca-bundle.crt</code></td>
+</tr>
+<tr>
+<td align="left"><code>--capath &lt;dir&gt;</code></td>
+<td align="left">指定 CA 证书目录</td>
+<td align="left"><code>--capath /etc/ssl/certs/</code></td>
+</tr>
+<tr>
+<td align="left"><code>--ciphers &lt;list&gt;</code></td>
+<td align="left">指定使用的加密套件</td>
+<td align="left"><code>--ciphers ECDHE-RSA-AES128-GCM-SHA256</code></td>
+</tr>
+<tr>
+<td align="left"><code>--tlsv1.2</code></td>
+<td align="left">强制使用 TLS 1.2</td>
+<td align="left"><code>--tlsv1.2 https://example.com</code></td>
+</tr>
+<tr>
+<td align="left"><code>--tlsv1.3</code></td>
+<td align="left">强制使用 TLS 1.3</td>
+<td align="left"><code>--tlsv1.3 https://example.com</code></td>
+</tr>
+<tr>
+<td align="left"><code>--connect-timeout &lt;seconds&gt;</code></td>
+<td align="left">连接超时时间（秒）</td>
+<td align="left"><code>--connect-timeout 10</code></td>
+</tr>
+<tr>
+<td align="left"><code>-m, --max-time &lt;seconds&gt;</code></td>
+<td align="left">整个操作的最大允许时间（秒）</td>
+<td align="left"><code>-m 30</code></td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="6-代理与限速"><a href="#6-代理与限速" class="headerlink" title="6. 代理与限速"></a>6. 代理与限速</h2><table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">说明</th>
+<th align="left">示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>-x, --proxy &lt;[protocol://]host[:port]&gt;</code></td>
+<td align="left">使用代理（支持 HTTP&#x2F;HTTPS&#x2F;SOCKS）</td>
+<td align="left"><code>-x http://proxy.example.com:8080</code></td>
+</tr>
+<tr>
+<td align="left"><code>--proxy-user &lt;user:pass&gt;</code></td>
+<td align="left">代理认证凭据</td>
+<td align="left"><code>--proxy-user user:pass</code></td>
+</tr>
+<tr>
+<td align="left"><code>--noproxy &lt;host-list&gt;</code></td>
+<td align="left">绕过代理的主机列表（逗号分隔）</td>
+<td align="left"><code>--noproxy localhost,127.0.0.1</code></td>
+</tr>
+<tr>
+<td align="left"><code>--socks5 &lt;host:port&gt;</code></td>
+<td align="left">使用 SOCKS5 代理（快捷方式）</td>
+<td align="left"><code>--socks5 127.0.0.1:1080</code></td>
+</tr>
+<tr>
+<td align="left"><code>--limit-rate &lt;speed&gt;</code></td>
+<td align="left">限制传输速率（单位：K&#x2F;M&#x2F;G）</td>
+<td align="left"><code>--limit-rate 100K</code></td>
+</tr>
+<tr>
+<td align="left"><code>-y, --speed-time &lt;seconds&gt;</code></td>
+<td align="left">若低于最低速度，经过该时间后终止</td>
+<td align="left"><code>-y 10 --speed-limit 1</code></td>
+</tr>
+<tr>
+<td align="left"><code>-Y, --speed-limit &lt;speed&gt;</code></td>
+<td align="left">最低传输速度阈值</td>
+<td align="left"><code>-Y 1</code>（表示 1 字节&#x2F;秒）</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="7-综合示例"><a href="#7-综合示例" class="headerlink" title="7. 综合示例"></a>7. 综合示例</h2><h3 id="7-1-发送-JSON-数据（POST）"><a href="#7-1-发送-JSON-数据（POST）" class="headerlink" title="7.1 发送 JSON 数据（POST）"></a>7.1 发送 JSON 数据（POST）</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">curl -X POST https://api.example.com/users \</span><br><span class="line">     -H &quot;Content-Type: application/json&quot; \</span><br><span class="line">     -d &#x27;&#123;&quot;name&quot;:&quot;John&quot;,&quot;age&quot;:30&#125;&#x27;</span><br></pre></td></tr></table></figure>
+
+<h3 id="7-2-表单提交-文件上传"><a href="#7-2-表单提交-文件上传" class="headerlink" title="7.2 表单提交 + 文件上传"></a>7.2 表单提交 + 文件上传</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">curl -X POST https://example.com/upload \</span><br><span class="line">     -F &quot;username=johndoe&quot; \</span><br><span class="line">     -F &quot;avatar=@/home/user/photo.jpg&quot;</span><br></pre></td></tr></table></figure>
+
+<h3 id="7-3-使用-Bearer-Token-认证的-GET-请求"><a href="#7-3-使用-Bearer-Token-认证的-GET-请求" class="headerlink" title="7.3 使用 Bearer Token 认证的 GET 请求"></a>7.3 使用 Bearer Token 认证的 GET 请求</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl -H &quot;Authorization: Bearer eyJhbGciOiJIUzI1NiIs...&quot; \</span><br><span class="line">     https://api.example.com/protected</span><br></pre></td></tr></table></figure>
+
+<h3 id="7-4-跟随重定向并保存-Cookie"><a href="#7-4-跟随重定向并保存-Cookie" class="headerlink" title="7.4 跟随重定向并保存 Cookie"></a>7.4 跟随重定向并保存 Cookie</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">curl -L -c cookies.txt -b cookies.txt \</span><br><span class="line">     https://example.com/login \</span><br><span class="line">     -d &quot;user=admin&amp;pass=1234&quot;</span><br></pre></td></tr></table></figure>
+
+<h3 id="7-5-下载文件并显示进度"><a href="#7-5-下载文件并显示进度" class="headerlink" title="7.5 下载文件并显示进度"></a>7.5 下载文件并显示进度</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -O https://example.com/largefile.zip --progress-bar</span><br></pre></td></tr></table></figure>
+
+<h3 id="7-6-调试-API-调用（详细输出-输出响应头）"><a href="#7-6-调试-API-调用（详细输出-输出响应头）" class="headerlink" title="7.6 调试 API 调用（详细输出 + 输出响应头）"></a>7.6 调试 API 调用（详细输出 + 输出响应头）</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -v -i https://api.example.com/endpoint</span><br></pre></td></tr></table></figure>
+
+<h3 id="7-7-通过代理访问-HTTPS-站点（跳过证书验证）"><a href="#7-7-通过代理访问-HTTPS-站点（跳过证书验证）" class="headerlink" title="7.7 通过代理访问 HTTPS 站点（跳过证书验证）"></a>7.7 通过代理访问 HTTPS 站点（跳过证书验证）</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -x http://proxy.corp.com:8080 -k https://internal.site</span><br></pre></td></tr></table></figure>
+
+<h3 id="7-8-限制速率下载"><a href="#7-8-限制速率下载" class="headerlink" title="7.8 限制速率下载"></a>7.8 限制速率下载</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -O https://example.com/big.iso --limit-rate 1M</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="8-最佳实践与注意事项"><a href="#8-最佳实践与注意事项" class="headerlink" title="8. 最佳实践与注意事项"></a>8. 最佳实践与注意事项</h2><ul>
+<li><strong>安全第一</strong>：生产环境中避免使用 <code>-k</code>（跳过证书验证），应正确配置 CA 证书。</li>
+<li><strong>避免将敏感信息暴露</strong>：命令中的密码、Token 等可能被 shell 历史记录捕获，建议使用交互式输入（如 <code>-u</code> 不加密码，会提示输入）或从文件读取。</li>
+<li><strong>使用 <code>--data-raw</code> 避免 <code>@</code> 解析</strong>：当你的数据恰好以 <code>@</code> 开头时，用 <code>--data-raw</code> 防止 curl 误认为文件路径。</li>
+<li>**复杂请求使用 <code>--libcurl</code>**：如果你需要将 curl 命令转换为编程语言的代码，可以使用 <code>--libcurl &lt;file&gt;</code> 生成 C 代码框架。</li>
+<li><strong>网络超时设置</strong>：在高延迟环境中，务必设置 <code>--connect-timeout</code> 和 <code>-m</code>，防止进程卡死。</li>
+<li><strong>批量请求</strong>：可以利用 <code>xargs</code> 或 <code>parallel</code> 与 curl 结合，实现并发请求，但注意控制并发数。</li>
+<li><strong>内容类型匹配</strong>：发送 JSON 时务必设置 <code>Content-Type: application/json</code>，发送表单时默认 <code>application/x-www-form-urlencoded</code>，用 <code>-F</code> 则是 <code>multipart/form-data</code>。</li>
+</ul>
+<hr>
+<h2 id="📖-延伸阅读"><a href="#📖-延伸阅读" class="headerlink" title="📖 延伸阅读"></a>📖 延伸阅读</h2><ul>
+<li>官方文档：<code>man curl</code> 或 <a target="_blank" rel="noopener" href="https://curl.se/docs/manpage.html">curl.se&#x2F;docs&#x2F;manpage.html</a></li>
+<li>常用选项速查表：<a target="_blank" rel="noopener" href="https://curl.se/docs/manual.html">curl.se&#x2F;docs&#x2F;manual.html</a></li>
+<li>在线调试工具：使用 <code>curl</code> 结合 <code>jq</code> 解析 JSON 响应。</li>
+</ul>
+<blockquote>
+<p><strong>提示</strong>：以上参数适用于 curl 7.x 及以上版本，部分参数可能需要较新版本支持。可用 <code>curl --version</code> 查看当前版本。</p>
+</blockquote>
+</div></article><aside class="post-outline post-outline--desktop" aria-label="文章目录"><p class="post-outline__eyebrow">本文导航</p><p class="post-outline__title">章节概览</p><nav class="post-toc" data-post-toc><ol class="post-toc__list"><li class="post-toc__list-item post-toc__list-level-2"><a class="post-toc__list-link" href="#1-%E8%AF%B7%E6%B1%82%E6%96%B9%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%8F%91%E9%80%81"><span class="post-toc__list-text">1. 请求方法与数据发送</span></a></li><li class="post-toc__list-item post-toc__list-level-2"><a class="post-toc__list-link" href="#2-%E8%AF%B7%E6%B1%82%E5%A4%B4%E4%B8%8E%E8%AE%A4%E8%AF%81"><span class="post-toc__list-text">2. 请求头与认证</span></a></li><li class="post-toc__list-item post-toc__list-level-2"><a class="post-toc__list-link" href="#3-%E8%BE%93%E5%87%BA%E4%B8%8E%E9%87%8D%E5%AE%9A%E5%90%91"><span class="post-toc__list-text">3. 输出与重定向</span></a></li><li class="post-toc__list-item post-toc__list-level-2"><a class="post-toc__list-link" href="#4-%E8%B0%83%E8%AF%95%E4%B8%8E%E4%BF%A1%E6%81%AF"><span class="post-toc__list-text">4. 调试与信息</span></a></li><li class="post-toc__list-item post-toc__list-level-2"><a class="post-toc__list-link" href="#5-SSL-TLS-%E4%B8%8E%E8%BF%9E%E6%8E%A5%E9%80%89%E9%A1%B9"><span class="post-toc__list-text">5. SSL&#x2F;TLS 与连接选项</span></a></li><li class="post-toc__list-item post-toc__list-level-2"><a class="post-toc__list-link" href="#6-%E4%BB%A3%E7%90%86%E4%B8%8E%E9%99%90%E9%80%9F"><span class="post-toc__list-text">6. 代理与限速</span></a></li><li class="post-toc__list-item post-toc__list-level-2"><a class="post-toc__list-link" href="#7-%E7%BB%BC%E5%90%88%E7%A4%BA%E4%BE%8B"><span class="post-toc__list-text">7. 综合示例</span></a></li><li class="post-toc__list-item post-toc__list-level-2"><a class="post-toc__list-link" href="#8-%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5%E4%B8%8E%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="post-toc__list-text">8. 最佳实践与注意事项</span></a></li><li class="post-toc__list-item post-toc__list-level-2"><a class="post-toc__list-link" href="#%F0%9F%93%96-%E5%BB%B6%E4%BC%B8%E9%98%85%E8%AF%BB"><span class="post-toc__list-text">📖 延伸阅读</span></a></li></ol></nav></aside></div><nav class="post-nav"><a class="post-nav__item post-nav__item--next" href="/2026/07/09/F12/"><span class="post-nav__label">下一篇</span><strong>F12</strong></a></nav></main><footer class="site-footer"><p class="site-footer__text">Ryxer</p><p class="site-footer__license">本站内容采用<a href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh-hans" target="_blank" rel="noopener"> CC BY-NC 4.0 </a>协议发布</p></footer></div></body></html>
