@@ -224,33 +224,7 @@
 <h2 id="四、XSS"><a href="#四、XSS" class="headerlink" title="四、XSS"></a>四、XSS</h2><p>如果担心弹窗风险可以使用控制台打印</p>
 <p><code>&lt;script&gt;console.log(&quot;xss123&quot;)&lt;/script&gt;</code></p>
 <p>(会在F12控制台的位置打印出来一个xss123) </p>
-<h3 id="1、-重点"><a href="#1、-重点" class="headerlink" title="1、 重点"></a>1、 重点</h3><h4 id="（1）第一重点"><a href="#（1）第一重点" class="headerlink" title="（1）第一重点"></a>（1）第一重点</h4><ul>
-<li><p>在挖掘xss时，尤其是src还有在waf的网站，必须使用探测payload而不是攻击payload；</p>
-</li>
-<li><p>不要上来就 &lt; script&gt;alert(1)&lt; &#x2F;script&gt; 、&lt; img src&#x3D;1 onerror&#x3D;alert(1)&gt;</p>
-<p>首先会遇到三个麻烦：waf直接拦截，payload根本打不进去、对方后端就过滤死不让使用&lt; &#x2F;script&gt; &lt; img&gt;这种明显标签、对方压根就不允许弹框；</p>
-</li>
-<li><p>很多时候可能存在xss只是你的标签被阻断了；</p>
-</li>
-<li><p>XSS的实际探测应该使用无危害的标签。XSS的本质原理就是解析了用户插入的标签，既然是解析标签，就可以插入没有攻击危害的标签先进行探测XSS，如果解析标签成功，确认存在XSS，再一步步绕过上面的“三个大麻烦”。</p>
-</li>
-<li><p>无危害探测标签，基本不会触发waf</p>
-<ul>
-<li><p>‘ “&gt;&lt; &#x2F;tExtArEa&gt;&lt; s&gt;123#&#x2F;&#x2F;–+ (最常用，只要有划了个横线的123就代表有XSS)</p>
-</li>
-<li><p><code>&lt;s&gt;123</code></p>
-</li>
-<li><p><code>&lt;h1&gt;123&lt;/h1&gt;</code></p>
-</li>
-<li><p><code>&lt;p&gt;123&lt;/p&gt;</code></p>
-</li>
-<li><p><code>&lt;/tExtArEa&gt;&lt;h1&gt;123&lt;/h1&gt;</code></p>
-</li>
-<li><p><code>&lt;/tExtArEa&gt;&lt;s&gt;123#//--+</code></p>
-</li>
-</ul>
-</li>
-</ul>
+<h3 id="1、-重点"><a href="#1、-重点" class="headerlink" title="1、 重点"></a>1、 重点</h3><h4 id="（1）第一重点"><a href="#（1）第一重点" class="headerlink" title="（1）第一重点"></a>（1）第一重点</h4><p><img src="/images/XSS.png" alt="XSS"></p>
 <h4 id="（2）第二重点"><a href="#（2）第二重点" class="headerlink" title="（2）第二重点"></a>（2）第二重点</h4><h5 id="XSS的实际检测原理"><a href="#XSS的实际检测原理" class="headerlink" title="XSS的实际检测原理"></a>XSS的实际检测原理</h5><ul>
 <li>插入标签后，返回包成功完整返回标签（比如bp返回包会把能解析的标签给个颜色，不能解析的就是默认黑色）</li>
 </ul>
