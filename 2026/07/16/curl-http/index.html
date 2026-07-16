@@ -337,22 +337,14 @@
 </tr>
 </tbody></table>
 <hr>
-<h2 id="7-综合示例"><a href="#7-综合示例" class="headerlink" title="7. 综合示例"></a>7. 综合示例</h2><h3 id="7-1-发送-JSON-数据（POST）"><a href="#7-1-发送-JSON-数据（POST）" class="headerlink" title="7.1 发送 JSON 数据（POST）"></a>7.1 发送 JSON 数据（POST）</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">curl -X POST https://api.example.com/users \</span><br><span class="line">     -H &quot;Content-Type: application/json&quot; \</span><br><span class="line">     -d &#x27;&#123;&quot;name&quot;:&quot;John&quot;,&quot;age&quot;:30&#125;&#x27;</span><br></pre></td></tr></table></figure>
-
-<h3 id="7-2-表单提交-文件上传"><a href="#7-2-表单提交-文件上传" class="headerlink" title="7.2 表单提交 + 文件上传"></a>7.2 表单提交 + 文件上传</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">curl -X POST https://example.com/upload \</span><br><span class="line">     -F &quot;username=johndoe&quot; \</span><br><span class="line">     -F &quot;avatar=@/home/user/photo.jpg&quot;</span><br></pre></td></tr></table></figure>
-
-<h3 id="7-3-使用-Bearer-Token-认证的-GET-请求"><a href="#7-3-使用-Bearer-Token-认证的-GET-请求" class="headerlink" title="7.3 使用 Bearer Token 认证的 GET 请求"></a>7.3 使用 Bearer Token 认证的 GET 请求</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl -H &quot;Authorization: Bearer eyJhbGciOiJIUzI1NiIs...&quot; \</span><br><span class="line">     https://api.example.com/protected</span><br></pre></td></tr></table></figure>
-
-<h3 id="7-4-跟随重定向并保存-Cookie"><a href="#7-4-跟随重定向并保存-Cookie" class="headerlink" title="7.4 跟随重定向并保存 Cookie"></a>7.4 跟随重定向并保存 Cookie</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">curl -L -c cookies.txt -b cookies.txt \</span><br><span class="line">     https://example.com/login \</span><br><span class="line">     -d &quot;user=admin&amp;pass=1234&quot;</span><br></pre></td></tr></table></figure>
-
-<h3 id="7-5-下载文件并显示进度"><a href="#7-5-下载文件并显示进度" class="headerlink" title="7.5 下载文件并显示进度"></a>7.5 下载文件并显示进度</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -O https://example.com/largefile.zip --progress-bar</span><br></pre></td></tr></table></figure>
-
-<h3 id="7-6-调试-API-调用（详细输出-输出响应头）"><a href="#7-6-调试-API-调用（详细输出-输出响应头）" class="headerlink" title="7.6 调试 API 调用（详细输出 + 输出响应头）"></a>7.6 调试 API 调用（详细输出 + 输出响应头）</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -v -i https://api.example.com/endpoint</span><br></pre></td></tr></table></figure>
-
-<h3 id="7-7-通过代理访问-HTTPS-站点（跳过证书验证）"><a href="#7-7-通过代理访问-HTTPS-站点（跳过证书验证）" class="headerlink" title="7.7 通过代理访问 HTTPS 站点（跳过证书验证）"></a>7.7 通过代理访问 HTTPS 站点（跳过证书验证）</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -x http://proxy.corp.com:8080 -k https://internal.site</span><br></pre></td></tr></table></figure>
-
-<h3 id="7-8-限制速率下载"><a href="#7-8-限制速率下载" class="headerlink" title="7.8 限制速率下载"></a>7.8 限制速率下载</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -O https://example.com/big.iso --limit-rate 1M</span><br></pre></td></tr></table></figure>
-
+<h2 id="7-综合示例"><a href="#7-综合示例" class="headerlink" title="7. 综合示例"></a>7. 综合示例</h2><h3 id="7-1-发送-JSON-数据（POST）"><a href="#7-1-发送-JSON-数据（POST）" class="headerlink" title="7.1 发送 JSON 数据（POST）"></a>7.1 发送 JSON 数据（POST）</h3><p>curl -X POST <a target="_blank" rel="noopener" href="https://api.example.com/users">https://api.example.com/users</a> <br>     -H “Content-Type: application&#x2F;json” <br>     -d ‘{“name”:”John”,”age”:30}’</p>
+<h3 id="7-2-表单提交-文件上传"><a href="#7-2-表单提交-文件上传" class="headerlink" title="7.2 表单提交 + 文件上传"></a>7.2 表单提交 + 文件上传</h3><p>curl -X POST <a href="https://example.com/upload">https://example.com/upload</a> <br>     -F “username&#x3D;johndoe” <br>     -F “avatar&#x3D;@&#x2F;home&#x2F;user&#x2F;photo.jpg”</p>
+<h3 id="7-3-使用-Bearer-Token-认证的-GET-请求"><a href="#7-3-使用-Bearer-Token-认证的-GET-请求" class="headerlink" title="7.3 使用 Bearer Token 认证的 GET 请求"></a>7.3 使用 Bearer Token 认证的 GET 请求</h3><p>curl -H “Authorization: Bearer eyJhbGciOiJIUzI1NiIs…” <br>     <a target="_blank" rel="noopener" href="https://api.example.com/protected">https://api.example.com/protected</a></p>
+<h3 id="7-4-跟随重定向并保存-Cookie"><a href="#7-4-跟随重定向并保存-Cookie" class="headerlink" title="7.4 跟随重定向并保存 Cookie"></a>7.4 跟随重定向并保存 Cookie</h3><p>curl -L -c cookies.txt -b cookies.txt <br>     <a href="https://example.com/login">https://example.com/login</a> <br>     -d “user&#x3D;admin&amp;pass&#x3D;1234”</p>
+<h3 id="7-5-下载文件并显示进度"><a href="#7-5-下载文件并显示进度" class="headerlink" title="7.5 下载文件并显示进度"></a>7.5 下载文件并显示进度</h3><p>curl -O <a href="https://example.com/largefile.zip">https://example.com/largefile.zip</a> –progress-bar</p>
+<h3 id="7-6-调试-API-调用（详细输出-输出响应头）"><a href="#7-6-调试-API-调用（详细输出-输出响应头）" class="headerlink" title="7.6 调试 API 调用（详细输出 + 输出响应头）"></a>7.6 调试 API 调用（详细输出 + 输出响应头）</h3><p>curl -v -i https:&#x2F;&#x2F; api.example.com&#x2F;endpoint</p>
+<h3 id="7-7-通过代理访问-HTTPS-站点（跳过证书验证）"><a href="#7-7-通过代理访问-HTTPS-站点（跳过证书验证）" class="headerlink" title="7.7 通过代理访问 HTTPS 站点（跳过证书验证）"></a>7.7 通过代理访问 HTTPS 站点（跳过证书验证）</h3><p>curl -x http:&#x2F;&#x2F; proxy.corp.com:8080 -k https:&#x2F;&#x2F; internal.site</p>
+<h3 id="7-8-限制速率下载"><a href="#7-8-限制速率下载" class="headerlink" title="7.8 限制速率下载"></a>7.8 限制速率下载</h3><p>curl -O https:&#x2F;&#x2F; example.com&#x2F;big.iso –limit-rate 1M</p>
 <hr>
 <h2 id="8-最佳实践与注意事项"><a href="#8-最佳实践与注意事项" class="headerlink" title="8. 最佳实践与注意事项"></a>8. 最佳实践与注意事项</h2><ul>
 <li><strong>安全第一</strong>：生产环境中避免使用 <code>-k</code>（跳过证书验证），应正确配置 CA 证书。</li>
@@ -365,7 +357,7 @@
 </ul>
 <hr>
 <h2 id="📖-延伸阅读"><a href="#📖-延伸阅读" class="headerlink" title="📖 延伸阅读"></a>📖 延伸阅读</h2><ul>
-<li>官方文档：<code>man curl</code> 或 <a target="_blank" rel="noopener" href="https://curl.se/docs/manpage.html">curl.se&#x2F;docs&#x2F;manpage.html</a></li>
+<li>官方文档：man curl 或 <a target="_blank" rel="noopener" href="https://curl.se/docs/manpage.html">curl.se&#x2F;docs&#x2F;manpage.html</a></li>
 <li>常用选项速查表：<a target="_blank" rel="noopener" href="https://curl.se/docs/manual.html">curl.se&#x2F;docs&#x2F;manual.html</a></li>
 <li>在线调试工具：使用 <code>curl</code> 结合 <code>jq</code> 解析 JSON 响应。</li>
 </ul>
